@@ -18,16 +18,25 @@ Edge Locations: Points of Presence
 
 > Choose the closest location to you in the course, using us-east-2: Ohio
 
+---
+***
+
 # Section 4: IAM & AWS CLI
 
 IAM  - Identity and Access Management, Global Service.
+
+#### IAM Groups
 
 Root account created by default, shouldn't be used or shared.
 - Instead create users, users are people within your org, and can be grouped.
 - Groups only contain user, cannot contain other groups.
     - Users don't have to belong to a group, and user can belong to multiple groups
 
+Why do we create groups? coz we want to give permissions to the users in the group to use account/access somethings.
 
+### IAM Permissions
 
-
+- Users or Groups can be assigned JSON documents called **policies**.
+- these policies define the permissions of the users.
+> In AWS you apply the ***least privilege principle***: don't give more permissions than a user needs
 
