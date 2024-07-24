@@ -140,3 +140,14 @@ credential report - is on the left hand side under access report, go there and d
 
 access advisor - go to the specific user and click on the access advisor, it will pop up all the permissions.
 
+### IAM Guidelines and Best Practices
+
+- Don't use the root account except for AWS account setup.
+- One physical user = one AWS user.
+- assign users to groups and assigne permissions to groups.
+- create a strong password policy and use mfa
+- create and use roles for giving permissions to AWS services
+- use access keys for programmatic access (CLI/SDK)
+- audit permissions of your account using IAM Credentials Report or IAM Access Advisor.
+- Never share IAM users and Access Keys.
+
