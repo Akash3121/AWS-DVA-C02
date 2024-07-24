@@ -305,4 +305,17 @@ Elastic Block Storage - EBS is a **network drive** you can attach to your instan
 - EBS are bound to specific AZ.
 - think of them as a network USB stick
 
+EBS Volume: 
+- It is a network drive (not a physical drive)  
+    - It uses the network to communicate the instance, which means there might be a bit of latency.
+    - It can be detached from an instance and attached to another one quickly.
+- It's locked to an AZ.
+    - an EBS Volume in us-east-1a cannot be attached to us-east-1b
+    - to move a volume across, you first need to snapshot it.
+- Have a provisioned capacity (size in GBs, and IOPS input/output operations per sec)
+    - you get billed for the provisioned capacity and you can increase the capacity of the drive over time.
+
+
+
+
 
