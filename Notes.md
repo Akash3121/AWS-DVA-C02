@@ -164,3 +164,33 @@ Users, groups, roles, policies management and monitoring.
 enable mfa on all accounts, rotate all your keys often, use IAM tools to apply appropriate permissions.
 
 analyze access patterns and review permissions
+
+---
+***
+
+# Section 5: EC2 Fundamentals
+
+### EC2 Basics
+
+It is the most popular offering of AWS
+
+EC2 = Elastic Compute Cloud = IaaS
+
+mainly consists in the capability of:
+- renting virtual machines (EC2)
+- storing data on virtual drives (EBS)
+- distributing load across machines (ELB)
+- scaling the services using an auto scaling group (ASG)
+
+EC2 sizing and configuration options
+
+- OS: Linux, windows or Mac OS
+- How much compute power and cores (CPU)
+- How much RAM
+- how much storage space:
+    - Network attached like EBS & EFS
+    - hardware - EC2 instance store
+- Network card: speed of the card, public IP address.
+- firewall rules: security group
+- bootstrap script - configure at first launch - EC2 user data.
+
