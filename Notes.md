@@ -151,3 +151,16 @@ access advisor - go to the specific user and click on the access advisor, it wil
 - audit permissions of your account using IAM Credentials Report or IAM Access Advisor.
 - Never share IAM users and Access Keys.
 
+### IAM Shared Responsibility Model
+
+AWS:
+
+Infrastructure(global network security), configuration and vulnerability analysis, compliance validation.
+
+User:
+
+Users, groups, roles, policies management and monitoring.
+
+enable mfa on all accounts, rotate all your keys often, use IAM tools to apply appropriate permissions.
+
+analyze access patterns and review permissions
