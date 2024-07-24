@@ -182,7 +182,7 @@ mainly consists in the capability of:
 - distributing load across machines (ELB)
 - scaling the services using an auto scaling group (ASG)
 
-EC2 sizing and configuration options
+**EC2 sizing and configuration options**:
 
 - OS: Linux, windows or Mac OS
 - How much compute power and cores (CPU)
@@ -193,4 +193,16 @@ EC2 sizing and configuration options
 - Network card: speed of the card, public IP address.
 - firewall rules: security group
 - bootstrap script - configure at first launch - EC2 user data.
+
+**EC2 User Data**:
+
+- it is possible to bootstrap our instance using an EC2 User data script.
+- bootstrapping means launching commands when a machine starts.
+- script is only run once at the instance first start
+- Ec2 user data is used to automate boot tasks such as: installing updates, installing softwares, downloading common files from the internet...
+- EC2 user data script runs with the root user.
+
+EC2 instace types:
+
+![ec 2 types](images/ec2instancetypes.png)
 
