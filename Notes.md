@@ -106,3 +106,10 @@ AWS SDK:
     - mobile sdks like adroid and java
     - iot device sdk like embedded c, Arduino
 
+AWS CLI Hands on:
+
+aws configure: command is used to configure
+
+and to check/confirm configuration use aws configure list command
+
+aws iam list-users command will give all users
