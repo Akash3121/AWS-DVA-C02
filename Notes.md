@@ -68,3 +68,11 @@ In Aws we can set a password policy:
 - allow all IAM users to change their own passwords
 - require users to change their password after some time(expiration like 90days) and preventing password re-use.
 
+IAM MFA: 
+- protect atleast root accounts and IAM users.
+- MFA devices
+    - virtual MFA: Google authenticator or authy.
+    - Universal 2nd Factor (U2F) Security Key: YubiKeys
+    - Hardware Key Fob MFA Device: like Gemalto
+    - Hardware key Fob MFA Device for AWS Gov Cloud(US): provided by SurePassID
+
