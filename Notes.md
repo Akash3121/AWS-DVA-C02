@@ -76,3 +76,33 @@ IAM MFA:
     - Hardware Key Fob MFA Device: like Gemalto
     - Hardware key Fob MFA Device for AWS Gov Cloud(US): provided by SurePassID
 
+IAM MFA Hands On:
+
+### IAM AWS Access Keys
+
+to access AWS we have 3 options:
+
+1. AWS Management Console - protected by password + MFA
+1. AWS Command Line Interface (CLI) - protected by access keys
+1. AWS Software Development Kit (SDK) - for code: protected by access key
+
+- Access Keys are generated through AWS console
+- Users manage their own access keys
+- Access keys are secret, just like a password, do not share them.
+- Access Key ID = username
+- Secret Access Key = password
+
+AWS CLI: a tool that enables you to interat with AWS Services using commands in your command-line shell.
+- direct access to public apis of AWS Services.
+- you can develop scrips to manage your resources. kinda alternate to using AWS Management Console.
+
+
+AWS SDK:
+- language specific API
+- enables you to access and manage AWS Services programmatically.
+- embedded within your application
+- supports
+    - sdks like java, python, js, go, node js etc
+    - mobile sdks like adroid and java
+    - iot device sdk like embedded c, Arduino
+
