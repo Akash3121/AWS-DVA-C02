@@ -134,3 +134,9 @@ Created a IAM Role for EC2 and give permission as IAMReadOnlyPermission.
     - Access advisor shows the service prmissions granted to a user and when those services were last accessed/used.
     - we can use this info to revise the policies.
 
+Security Tools hands on: 
+
+credential report - is on the left hand side under access report, go there and download the report.
+
+access advisor - go to the specific user and click on the access advisor, it will pop up all the permissions.
+
