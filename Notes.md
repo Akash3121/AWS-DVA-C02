@@ -56,3 +56,15 @@ Policy Structure:
     - action: list of actions this policy allows or denies
     - resource: list of resources to which the actions applied to
     - condition: when this policy is in effect (Optional)
+
+IAM Policies Hands On:
+
+### IAM MFA Overview:
+
+IAM Password Policy
+- Strong password = high security.
+In Aws we can set a password policy:
+- set a min password length, require specific character types like numbers and special characters
+- allow all IAM users to change their own passwords
+- require users to change their password after some time(expiration like 90days) and preventing password re-use.
+
