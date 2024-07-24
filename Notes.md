@@ -40,3 +40,19 @@ Why do we create groups? coz we want to give permissions to the users in the gro
 - these policies define the permissions of the users.
 > In AWS you apply the ***least privilege principle***: don't give more permissions than a user needs
 
+Did Hands on User creations.
+
+### IAM Policies Inheritance
+
+Policy Structure:
+- Consists of
+    - version: policy lang version, always include "2012-10-17"
+    - Id: an identifier of policy(Optional)
+    - statement: one or more individual statements
+- Statement consists of
+    - sid: statement id
+    - effect: allow/deny
+    - principal: account/user/role to which this policy is applied to.
+    - action: list of actions this policy allows or denies
+    - resource: list of resources to which the actions applied to
+    - condition: when this policy is in effect (Optional)
