@@ -18,6 +18,16 @@ Edge Locations: Points of Presence
 
 > Choose the closest location to you in the course, using us-east-2: Ohio
 
-Done with section 3
+# Section 4: IAM & AWS CLI
+
+IAM  - Identity and Access Management, Global Service.
+
+Root account created by default, shouldn't be used or shared.
+- Instead create users, users are people within your org, and can be grouped.
+- Groups only contain user, cannot contain other groups.
+    - Users don't have to belong to a group, and user can belong to multiple groups
+
+
+
 
 
