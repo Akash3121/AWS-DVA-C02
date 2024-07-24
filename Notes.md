@@ -260,3 +260,7 @@ Classic ports ot know:
 - 443: HTTPS - access secured websites
 - 3389: RDP(Remote Desktop Protocol) - to login to a windows instance
 
+Security Groups hands on:
+
+- if there is a timeout, it's mostly coz of Instance SG.
+
