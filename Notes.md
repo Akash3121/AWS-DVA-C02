@@ -264,3 +264,30 @@ Security Groups hands on:
 
 - if there is a timeout, it's mostly coz of Instance SG.
 
+### SSH Overview
+
+Connect to SSH using Linux or Mac
+
+During the creating/launching instance we have downloaded a key pair like EC2Tutorial.pem file.
+
+go to the folder in the terminal where we have the EC2Tutorial.pem file, and type the command below:
+
+ssh -i EC2Tutorial.pem ec2-user@18.116.81.233
+
+here 18.116.81.233 is the public ip for the instance
+
+May be you will get the errors as permissions required for the EC2Tutorial.pem file so use this command chmod 0400 EC2tutorial.pem to give permissions and then run the ssh command again then you will be able to connect.
+
+#### Instance Connect
+
+in the instance page there would be connect on the top click it and follow the process.
+
+### EC2 Instance Roles 
+
+Demo: while using the instance connect, we need to configure the credentials, we are not supposed to put credentials in there, so then we need the Roles.
+
+To add IAM Role go to Action on top right corner in the instance page
+
+Actions > Security > Modify IAM role
+
+Now role is attached to the instance.
