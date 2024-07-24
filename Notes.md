@@ -113,3 +113,8 @@ aws configure: command is used to configure
 and to check/confirm configuration use aws configure list command
 
 aws iam list-users command will give all users
+
+AWS CloudShell: shell inside the Management Console 
+
+
+
