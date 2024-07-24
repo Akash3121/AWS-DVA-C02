@@ -315,7 +315,14 @@ EBS Volume:
 - Have a provisioned capacity (size in GBs, and IOPS input/output operations per sec)
     - you get billed for the provisioned capacity and you can increase the capacity of the drive over time.
 
+EBS - Delete on termination attribute (last to 2nd column)
+- controls the EBS behaviour when an EC2 instance terminates
+    - by default, the root EBS volume is deleted (attribute enabled - check box ticked)
+    - by default, any other attached EBS volume is not deleted (attribute disabled - check box unchecked)
+- this can be controlled by AWS console/ AWS CLI
+- use case: preserve root volume when instance is terminated.
 
+Done till 44
 
 
 
