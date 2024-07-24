@@ -251,3 +251,12 @@ Good to Know data:
 - if your application is not accessible (time out), then it's asecurity group issue.
 - if your application gives a "connection refused" error, then it's an application error or it's not launched
 - By default all inbound traffic is blocked and all outboudn traffic is authorized
+
+Classic ports ot know:
+- 22: SSH - log into a linux instance
+- 21: FTP - upload files into a file share
+- 22: SFTP (Secure FTP) - upload files using ssh
+- 80: HTTP - access unsecured websites
+- 443: HTTPS - access secured websites
+- 3389: RDP(Remote Desktop Protocol) - to login to a windows instance
+
