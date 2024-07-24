@@ -206,3 +206,30 @@ EC2 instace types:
 
 ![ec 2 types](images/ec2instancetypes.png)
 
+### Create a EC2 instance with EC2 User Data to have a website
+
+follow the process to create an instance, start, stop and terminate
+
+### EC2 Instance types overview
+
+naming convention: m5.2xlarge
+
+- m: instance class
+- 5: generation (AWS Improves them over time)
+- 2xlarge: size within the instance class
+
+General Purpose: great for diversity of workloads such as web servers or code repositories.
+- balance bw: compute, networking and memory.
+
+Compute Optimized: great for compute-intensive tasks that require high performance processors/
+- batch processing workloads, media transcoding, high performance web servers, ML, dedicated gaming servers.
+- instance class starts with c
+
+Memory Optimized: fast performance for workloads that process large data sets in memory
+
+- use cases: high performance relational/non-relatinal dbs, in memory dbs optimized for BI
+- name series start with R for ram, x1 and z1
+
+Storage Optimized: great for storage intensive tasks that require high read and write access to large data sets on local storage.
+- use cases: relational and nosql dbs, cache for in-memory dbs, high freq online transation processing (OLTP), 
+- starts with i, d, or h1
