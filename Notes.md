@@ -125,4 +125,12 @@ IAM Roles hands on:
 
 Created a IAM Role for EC2 and give permission as IAMReadOnlyPermission.
 
+### IAM Security Tools
+
+- IAM Credential Report (account level)
+    - a report of list all your account's users and the status of their various credentials.
+
+- IAM Access Advisor (user-level)
+    - Access advisor shows the service prmissions granted to a user and when those services were last accessed/used.
+    - we can use this info to revise the policies.
 
