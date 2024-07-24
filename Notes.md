@@ -233,3 +233,21 @@ Memory Optimized: fast performance for workloads that process large data sets in
 Storage Optimized: great for storage intensive tasks that require high read and write access to large data sets on local storage.
 - use cases: relational and nosql dbs, cache for in-memory dbs, high freq online transation processing (OLTP), 
 - starts with i, d, or h1
+
+### Intro to Security Groups
+
+- fundamental of network security in AWS
+- they control how the traffic is allowed in or out of our EC2 instances.
+- SGs only contain allow rules
+- SG rules can reference by IP or by securtiy group.
+- SGs are like acting firewall for EC2 instances.
+- they regulate: access to ports, authorized ip ranges - ipv4 and ipv6, control of inbound and outbound networks
+
+Good to Know data:
+- SGs can be attached to multiple instances.
+- locked down to a region/VPC combination
+- does live **outside** the EC2 - if traffic is blocked teh EC2 instance won't see it.
+> its good to manintain one separate SG for SSH access.
+- if your application is not accessible (time out), then it's asecurity group issue.
+- if your application gives a "connection refused" error, then it's an application error or it's not launched
+- By default all inbound traffic is blocked and all outboudn traffic is authorized
