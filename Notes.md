@@ -116,5 +116,13 @@ aws iam list-users command will give all users
 
 AWS CloudShell: shell inside the Management Console 
 
+### IAM Roles for AWS Services:
+- some service will need to perform actions on your behalf.
+- to do so, we will assign permissions to AWS Services with AWS IAM Roles.
+- common roles like EC2 Instance Roles, Lambda Fuction Roles, Roles for CloudFormation.
+
+IAM Roles hands on:
+
+Created a IAM Role for EC2 and give permission as IAMReadOnlyPermission.
 
 
