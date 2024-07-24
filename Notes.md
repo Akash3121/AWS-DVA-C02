@@ -291,3 +291,18 @@ To add IAM Role go to Action on top right corner in the instance page
 Actions > Security > Modify IAM role
 
 Now role is attached to the instance.
+
+---
+***
+
+# Section 6: EC2 Instance Storage
+
+### EBS Overview
+
+Elastic Block Storage - EBS is a **network drive** you can attach to your instances while they run.
+- It allows your instances to persist data, even after their temination.
+- they can be only mounted to one instace at a time(at CCP Level) but can have multi-attach (at Dev, Sysops, Sol Architect level)
+- EBS are bound to specific AZ.
+- think of them as a network USB stick
+
+
