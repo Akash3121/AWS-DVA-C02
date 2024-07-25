@@ -383,3 +383,13 @@ Left side unde Images > AMI - select the image that we created and top right the
 
 or while creating the instance in the instance page instead of selecting quick start, just left to that My AMI click that and select the AMI
 
+### EC2 instance store
+
+EBS voluems are network drives with good but "limited" performance
+- if you need a higher performance hardware disk, use EC2 Instance store.
+
+- better I/O performance
+- EC2 instance stores lose their store if they're stopped (ephemeral)
+- Good for buffer/cache/temp data
+- risk of data loss if hardware fails
+- backups and replication are you responsibility
