@@ -443,3 +443,10 @@ Performance:
 
 Storage Tier:
 - standard, inferquent access (EFS_IA), archive
+
+EFS hands on:
+create a EFS
+
+then while creating the instance use the newly created EFS before adding FS you need to create/add subnet
+
+connect to multiple instances, create a file from one instance and then check this file in another instance, you can see the file
