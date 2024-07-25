@@ -472,3 +472,16 @@ EFS:
 
 - EFS has high price point than EBS
 - can leverage storage tier for cost savings
+
+### EBS & EFS cleanup
+
+for file system, goto actinos and delete
+
+terminate instances
+ 
+volumes - right click and delete
+
+snapshots - right click and delete
+
+SGs- right click and delete
+
