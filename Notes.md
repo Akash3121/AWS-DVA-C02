@@ -343,3 +343,14 @@ EBS Snapshot features:
 - EBS Snapshot Archive: move snapshot to archive tier - 75% cheaper - restoring take 24 to 72hrs
 - Recycle bin for snapshots: set up rule to recover snapshot - specify retention from 1 day to 1 year
 - Fast Snapshot Restore (FSR): force full initialization of snapshot no latency on first use- costly
+
+EBS Snapshot hands on:
+
+click on the volume > Actions > Create snapshot
+
+Left side under the EBS > click on snapshots, you can see all the snapshots, right click on the snapshot then copy, now you can transfer this to any destination AZ
+
+Actions > create volume from snapshots - we can create the volume based on snapshot in any AZ
+
+on the top there would be Recycle bin click that and can set a rule for retention rule for EBS snapshot - we can recover it.
+
