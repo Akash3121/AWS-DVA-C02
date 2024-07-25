@@ -544,3 +544,28 @@ health checks:
     - eg: protocol: HTTP, Port: 4567, Endpoint: /health
 - if the response is not 200 OK, then the instane is unhealthy
 
+types of LB on AWS
+
+4 kinds:
+1. classic LB - CLB 
+    - depricated but still available to use
+    - HTTP, HTTPS, TCP, SSL (Secure TCP)
+
+2. application LB - ALB
+    - HTTP, HTTPS, WebSocket
+
+3. Netowrk LB - NLT
+    - TCP, TLS (secure TCP), UDP
+
+4. Gateway LB - GWLB
+    - operates at layer 3(Network layer) - ip protocol
+
+it is recommended to use the newer generation Lbs as they provide more features
+
+some lb can setup internal (public) or external (private) ELBs
+
+Load Balncer Security groups
+
+users can connect to LB using HTTP(port 80) or HTTPS(port 443)
+
+and then the Ec2 instances should allow traffic only directly from LB
