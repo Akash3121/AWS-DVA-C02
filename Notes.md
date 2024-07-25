@@ -393,3 +393,18 @@ EBS voluems are network drives with good but "limited" performance
 - Good for buffer/cache/temp data
 - risk of data loss if hardware fails
 - backups and replication are you responsibility
+
+### EBS volume types
+
+6types
+
+- gp2/gp3 (SSD) - general purpose - balance price and performance
+- io1/io2 block express (SSD) - Provisioned IOPS - high performance SSD volume for machine critical low latency or high-throughput workloads - supports EBS Multi-attach
+- st1 (HDD) - low cost HDD volume designed for frequently access, through put intensive workloads 
+- sc1 (HDD) - lowest cost HDD for less freq accessed workloads
+
+
+EBS volumes are characterized in size/throughput/IOPS
+
+- only SSD based volumes can be used as a boot volume
+
