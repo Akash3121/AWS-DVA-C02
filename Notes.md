@@ -332,5 +332,14 @@ Deleting is click on the any volume, go to actions > delete volume
 
 Delete on termination: on the storage on instance page, scroll to the end (last to 2nd option) delete on the termination, is yes for the default volume and others are no, i.e., if you terminate (Actions > Terminate instance ) the instance the volume that is attached by default is also terminated by the ones that we attached will not be terminated
 
+### EBS Snapshots
 
+- make a backup (snapshot) of EBS volume at a point of time.
+- not necessary to detach the volume to take snapshot, but recommended
+- Can copy snapshots across regions and AZs
 
+EBS Snapshot features:
+
+- EBS Snapshot Archive: move snapshot to archive tier - 75% cheaper - restoring take 24 to 72hrs
+- Recycle bin for snapshots: set up rule to recover snapshot - specify retention from 1 day to 1 year
+- Fast Snapshot Restore (FSR): force full initialization of snapshot no latency on first use- costly
