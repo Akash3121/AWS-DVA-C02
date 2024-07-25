@@ -450,3 +450,17 @@ create a EFS
 then while creating the instance use the newly created EFS before adding FS you need to create/add subnet
 
 connect to multiple instances, create a file from one instance and then check this file in another instance, you can see the file
+
+### EFS vs EBS
+
+EBS volumes:
+- one instance (expect multi-attach io1/io2)
+- are locked at AZ level
+- gp 2 - io increases if disk size increase
+- gp3/io1 - can increase io independantly
+
+To migrage an ebs across AZ
+- take a snapshot, restore the snapshot using another AZ
+- EBS backup use IO, you shouldn't use this while application is handling a lot of traffic
+
+Root EBS voluems gets aterminated if ec2 instance is terminated 
