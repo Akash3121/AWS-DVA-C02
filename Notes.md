@@ -513,3 +513,28 @@ High availability - usually goes hand in hand with horizontal scaling
 - goal of high availability is to survive a data center loss
 
 - ASG multi AZ, LB multi AZ
+
+### ELB Overview
+
+what is load balancing? - Load balances are servers that forward traffic to multiple servers (eg EC2 instances) downstream
+
+Why load balancers?
+- spread load across multiple downstream instances
+- expose a single point of access (DNS) to your application
+- seamlessly handle failures of downstream instances
+- do regular health checks to your instances
+- provide SSL termination (HTTPS) for your websites
+- high availability across zones
+- seperate public traffic from private traffic
+
+Why ELB?
+- it is a managed load balancer
+    - AWS gaurantes that it will be working, AWS takes care of upgrades, maintenance, high availability
+
+- it costs less to set up your own lb but it will be a lot more efforts on your end.
+
+- it is integrated with many AWS offerings/services
+    - ec2, ec2 ASG, Amazon ECS(elastic container service)
+    - AWS certificate manger (ACM), cloudwatch
+    - route 53, AWS WAF, AWS Global Accelerator
+
