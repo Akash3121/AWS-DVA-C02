@@ -322,7 +322,15 @@ EBS - Delete on termination attribute (last to 2nd column)
 - this can be controlled by AWS console/ AWS CLI
 - use case: preserve root volume when instance is terminated.
 
-Done till 44
+EBS Hands on 
+
+On the instance page, go to storage and under the volume you can see the EBS attached to it, you can create a new one and attach via actions > attach volume, and check on instance page > storage > volume
+
+Note: you can only attach to the same AZ of the instance, means instance and the Volume that you are gonna create should be in same volume
+
+Deleting is click on the any volume, go to actions > delete volume
+
+Delete on termination: on the storage on instance page, scroll to the end (last to 2nd option) delete on the termination, is yes for the default volume and others are no, i.e., if you terminate (Actions > Terminate instance ) the instance the volume that is attached by default is also terminated by the ones that we attached will not be terminated
 
 
 
