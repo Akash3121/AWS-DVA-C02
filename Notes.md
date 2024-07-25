@@ -590,3 +590,10 @@ routing tables to different target groups:
 - routing based on path in URL (example.com/users)
 - based on hostname in URL (one.example.com, other.example.com)
 - vased on Query String, Headers (examples.com/users?id=123&order=false)
+
+ALB are great fit for micro services & container based application (ex: docker & amazon ECS)
+- has a port mapping feature to redirect to a dynamic port in ECS
+- in comparison, we'd need multiple CLB per application
+
+![ALB HTTP based traffic](images/ALB-HTTPbasedtraffic.png)
+here external ALB is public faced
