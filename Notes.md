@@ -408,3 +408,15 @@ EBS volumes are characterized in size/throughput/IOPS
 
 - only SSD based volumes can be used as a boot volume
 
+### EBS Multi-attach
+
+- io1/io2 family
+
+- Attach the same EBS volume to multiple EC2 instances in same AZ
+- each instance has full read & write permissions to high performance volume
+- upto 16 ec2 instances at a time
+- must use a file system that is cluster aware (not XFS, EXT4 ...)
+
+use cases: 
+- higher application availability 
+- applications must manage concurrent write operations
