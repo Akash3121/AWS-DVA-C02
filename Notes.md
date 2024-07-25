@@ -605,3 +605,13 @@ ALB Target Groups:
 - IP addresses - must be private IPs
 - ALB can route to multiple target groups
 - health checks are at the target group level
+
+ALB query strings/parameter routing:
+
+![ALB Queryparameter routing](images/ALB-Query-parameterrouting.png)
+
+Good to Know data:
+- fixed hostnames (xxx.region.elb.amazonaws.com)
+- the application servers (eg: ec2 instances) don't see the IP of the client directly
+    - the true IP of the client is inserted in the header X-forwared-for
+    - we can also get Port (X-Forwarded-Port) and protocol (X-Forwarded-protocol)
