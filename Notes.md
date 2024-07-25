@@ -597,3 +597,11 @@ ALB are great fit for micro services & container based application (ex: docker &
 
 ![ALB HTTP based traffic](images/ALB-HTTPbasedtraffic.png)
 here external ALB is public faced
+
+ALB Target Groups:
+- EC2 instances (can be managed by an ASG) - HTTP
+- ECS tasks (managed by ECS itself) - HTTP
+- Lambda functions - HTTP request is translated into a JSON event
+- IP addresses - must be private IPs
+- ALB can route to multiple target groups
+- health checks are at the target group level
