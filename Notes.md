@@ -420,3 +420,26 @@ EBS volumes are characterized in size/throughput/IOPS
 use cases: 
 - higher application availability 
 - applications must manage concurrent write operations
+
+### EFS Overview
+Elastic file system
+- managed NFS (Network File System) that can be mounted on many EC2 instances.
+- EFS works with EC2 instance in multiple AZs
+- highly available, scalable, expensive
+
+Ex: from 3 AZs us-east-1a, us-east-1b, us-east-1c EC2 instances can connect to EFS surrounded by security group at the same time
+
+use cases: content management, web serving, data sharing, wordpress
+
+- uses security group to control access to EFS
+- compatible with linux based AMI(not windows)
+- encryption at rest using KMS
+- POSIX file system (~Linux) has a standard file API
+- File System scales automatically, pay-per-use, no capacity planning
+
+Performance:
+- gp (default) - latency sensitive use cases
+- max i/o - high latency, throughput, highly parallel
+
+Storage Tier:
+- standard, inferquent access (EFS_IA), archive
