@@ -653,3 +653,9 @@ NLB Target Groups
 - IP addresses - must be private IPs (like our own data center)
 - ALB 
 - health checks support TCP, HTTP, HTTPS protocols
+
+NLB hands on:
+
+create NLB > choose internet facing and ipv4 > choose all AZs > attach SGs -> create new oneallow http traffic from anywhere and remove the default one > in listener use TCP port 80 and create a target gropu choose instances protoco is TCP over port 80 and health check is HTTP
+
+Mkae 2 available instances and add those in the NLB
