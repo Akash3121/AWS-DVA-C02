@@ -662,3 +662,21 @@ Make 2 available instances and add those in the NLB
 
 delete all as part of clean up
 
+### Gateway LB (GWLB)
+
+- deploy, scale and manage a fleet of 3rd party network virtual appliances in AWS
+- ex: Firewalls, IDS and IPS, Deep Packet Inspection Systems, payload manipulation,...
+
+![GWLB eg](images/GWLBeg.png)
+explanation: the users send traffic and based on the routing table the traffic goes to GWLB and it routes to 3rd party apps like firewall one the checks are done(everything is okay) it returns to GWLB this then distributes the traffic to the applications like insatnces
+
+- operates at layer 3 (network layer) - IP packets
+- combines the following functions:
+    - Transparent Network Gateway: single entry/exit for all traffic
+    - Load Balancer - distributes traffic to your virtual appliances
+- uses GENEVE protocol on port 6081
+
+GWLB target groups:
+- EC2 instances
+- IP address - must be private IPs
+
