@@ -711,3 +711,30 @@ hands on:
 open instance > target groups > actions > edit attributes > there would be a check box for stickiness, we can see 2 types: 
 1. lb generated cookies 
 2. applicaction based cookies
+
+### ELB - Cross Zone Load Balancing
+
+![cross zone lb](images/crosszonelb.png)
+explanation: with cross zone - total requests will be 100 and distribted across the AZs 
+
+ALB
+- Cross ZoneLB is enabled by default (can be disabled at the Target Group Level)
+- no charges for inter AZ data
+
+NLB & GWLB
+- CZLB is disabled by default
+- you pay charges for inter AZ data if enabled
+
+CLB
+- CZLB id disabled by default
+- no charge for inter AZ data if enabled
+
+hands on:
+for NLB, select NLB > attributes > cross zone load balancing is off by default > edit and turn on
+
+Similarly for GWLB
+
+for ALB, select LB > attributes > cross zone load balancing is on by default
+goto trget group and attributes and edit select off from the drop down
+
+Done till 67
