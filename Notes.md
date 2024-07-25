@@ -633,3 +633,23 @@ previously we allowed traffic to instances from anywhere, now we need to change 
 
 goto LB > select LB > listener > add rule > name: demorule > add condition > eg: path /error (multiple possibilities) > action types > set priorities 1 is highest 50K is lowest
 
+### Network LB (v2)
+layer 4(Network layer) LB
+- forward TCP & UDP traffic to your instances
+- handle milions of requests per seconds
+- less latency ~ 100ms (vs 400ms for ALB)
+
+NLB has **one static IP per AZ**, and supports assignign Elastic IP (helpful for whitelisting specific IP)
+
+NLB are used for extreme performance, TCP or UDP traffic.
+- not in the free tier
+
+TCP (Layer 4) based traffic
+
+![tcp based traffic](images/NLBTCPbasedtraffic.png)
+
+NLB Target Groups
+- ec2 instances
+- IP addresses - must be private IPs (like our own data center)
+- ALB 
+- health checks support TCP, HTTP, HTTPS protocols
