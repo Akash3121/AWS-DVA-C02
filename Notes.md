@@ -464,3 +464,11 @@ To migrage an ebs across AZ
 - EBS backup use IO, you shouldn't use this while application is handling a lot of traffic
 
 Root EBS voluems gets aterminated if ec2 instance is terminated 
+
+EFS:
+- mouting 100s of instances acroos AZ
+- EFS share webiste file(wordpress)
+- only for linux (POSIX)
+
+- EFS has high price point than EBS
+- can leverage storage tier for cost savings
