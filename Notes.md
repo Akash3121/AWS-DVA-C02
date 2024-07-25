@@ -538,3 +538,9 @@ Why ELB?
     - AWS certificate manger (ACM), cloudwatch
     - route 53, AWS WAF, AWS Global Accelerator
 
+health checks:
+- crusial for LBs, they enable the LB to know if instances it forwards traffic to are available to reply to requests.
+- health check is done on a port and route (/health is common)
+    - eg: protocol: HTTP, Port: 4567, Endpoint: /health
+- if the response is not 200 OK, then the instane is unhealthy
+
