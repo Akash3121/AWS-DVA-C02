@@ -375,3 +375,11 @@ AMI Process for EC2 instance:
 - build an AMI - this will create an EBS snapshot
 - Launch instance from other AMI (can launch in diff AZ)
 
+AMI Hands on:
+
+Create an instance > right click on the instance > image and templates > create image 
+
+Left side unde Images > AMI - select the image that we created and top right there would be Launch Instance from AMI
+
+or while creating the instance in the instance page instead of selecting quick start, just left to that My AMI click that and select the AMI
+
