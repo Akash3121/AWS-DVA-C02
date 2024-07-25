@@ -496,17 +496,20 @@ scalability means an application/system can handle greater loads by adapting.
 
 scalability is linked but different to high availability.
 
-vertical scalability - increase the size of instance
+vertical scalability {scale up/down}- increase the size of instance
 - common for non distributed sustesm like databases, RDS, ElastiCache
 
 there would be hardware limit
 
-Horizontal scalability (=elasticity)- increaing the no of instances. - implies distributed systesm.
+Horizontal scalability {scale out/in} (=elasticity)- increaing the no of instances. - implies distributed systesm.
 
-common for web apps/ modern apps
+- common for web apps/ modern apps
+- easy to horizontally scal thanks to cloud offerings
 
-easy to horizontally scal thanks to cloud offerings
+- ASG, Load Balancer
 
 High availability - usually goes hand in hand with horizontal scaling
 - means running application/system in atleast 2 data centers (same as AZs)
 - goal of high availability is to survive a data center loss
+
+- ASG multi AZ, LB multi AZ
