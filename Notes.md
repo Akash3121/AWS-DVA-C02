@@ -625,3 +625,11 @@ create a second instance similarly
 Goto Load Balancing (on left side) > load balancers > create lb
 
 Create a new SG to allow only HTTP from anywhere, follow steps and click next and register instances, it is linked under the listener
+
+ALB hands on: part 2 - video 62
+
+previously we allowed traffic to instances from anywhere, now we need to change the SG inbound rules as it should only allow traffic from only LB - so goto SG > open SG > edit inbound rules and search for the "load" there you will get the SG group of load balancer
+- here tightened the network security
+
+goto LB > select LB > listener > add rule > name: demorule > add condition > eg: path /error (multiple possibilities) > action types > set priorities 1 is highest 50K is lowest
+
