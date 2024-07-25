@@ -615,3 +615,13 @@ Good to Know data:
 - the application servers (eg: ec2 instances) don't see the IP of the client directly
     - the true IP of the client is inserted in the header X-forwared-for
     - we can also get Port (X-Forwarded-Port) and protocol (X-Forwarded-protocol)
+
+ALB Hands On: part 1 -  video 61
+
+create an first instance without the key pair and use the SG launch-wizard-1(allows SSH traffic and HTTP traffic) and use ec2 data to show Hello world.
+
+create a second instance similarly
+
+Goto Load Balancing (on left side) > load balancers > create lb
+
+Create a new SG to allow only HTTP from anywhere, follow steps and click next and register instances, it is linked under the listener
