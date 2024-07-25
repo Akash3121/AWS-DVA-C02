@@ -569,3 +569,7 @@ Load Balncer Security groups
 users can connect to LB using HTTP(port 80) or HTTPS(port 443)
 
 and then the Ec2 instances should allow traffic only directly from LB
+
+### Classic LB
+
+Note: CLB is deprecated at AWS and will soon will not be available in AWS console. exam has also removed any references to it.
