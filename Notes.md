@@ -573,3 +573,20 @@ and then the Ec2 instances should allow traffic only directly from LB
 ### Classic LB
 
 Note: CLB is deprecated at AWS and will soon will not be available in AWS console. exam has also removed any references to it.
+
+### Application LB (v2)
+
+ALB is a layer 7 (application - HTTP)
+
+load balancing to multiple HTTP applications across machines(target groups)
+
+load balancing to multiple applications on the same machine (ex: containers)
+
+support for HTTP/2 and websocket
+
+support redirects (from HTTP to HTTPS for example)
+
+routing tables to different target groups:
+- routing based on path in URL (example.com/users)
+- based on hostname in URL (one.example.com, other.example.com)
+- vased on Query String, Headers (examples.com/users?id=123&order=false)
