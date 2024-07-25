@@ -354,3 +354,24 @@ Actions > create volume from snapshots - we can create the volume based on snaps
 
 on the top there would be Recycle bin click that and can set a rule for retention rule for EBS snapshot - we can recover it.
 
+### AMI Overview
+Amazon Machine Image
+
+AMI are customization of EC2 instances.
+- can add own software, os, configuration, moitoring ..
+- faster boot/ configuration time coz all software is pre-packaged
+
+AMIs are built for specific region and can be copied across regions.
+
+You can launch EC2 instance from 
+- pulic AMI: AWS provided
+- your own: make and maintain by you
+- AWS marketplace: some one else made and sells
+
+AMI Process for EC2 instance:
+
+- start an EC2 instance and customize it.
+- stop the instance (data integrity)
+- build an AMI - this will create an EBS snapshot
+- Launch instance from other AMI (can launch in diff AZ)
+
