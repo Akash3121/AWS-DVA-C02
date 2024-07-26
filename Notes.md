@@ -774,3 +774,9 @@ Classic Load Balancer (v1)
 Application Load Balancer (v2) & Network Load Balancer (v2)
 - Supports multiple listeners with multiple SSL certificates 
 - Uses Server Name Indication (SNI) to make it work
+
+ELB SSL certificates hands on:
+
+open LB like ALB > goto listeners and add a listener > add protocoll like HTTP > and change the default action to forward it to target group > Secure listener settings is the one about SSL certificates, add security policy
+
+same process for NLB
