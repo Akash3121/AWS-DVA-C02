@@ -780,3 +780,17 @@ ELB SSL certificates hands on:
 open LB like ALB > goto listeners and add a listener > add protocoll like HTTP > and change the default action to forward it to target group > Secure listener settings is the one about SSL certificates, add security policy
 
 same process for NLB
+
+### ELB - Connection Draining
+
+Feature naming
+- Connection Draining – for CLB
+- Deregistration Delay – for ALB & NLB
+
+- Time to complete “in-flight requests” while the instance is de-registering or unhealthy
+- Stops sending new requests to the EC2 instance which is de-registering
+- can set the time Between 1 to 3600 seconds (default: 300 seconds)
+- Can be disabled (set value to 0)
+- Set to a low value if your requests are short
+- set to a high value if requests are long like uploading
+
