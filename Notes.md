@@ -1045,3 +1045,25 @@ for deleting first delete reader instance than delete writer instance, then you 
 - no code changes required for most apps, (insted connecting to RDS db instance you will connect to RDS proxy)
 - enforce IAM authentication for DB, and securely store credentials in AWS secrets manager
 - RDS proxy is never public accessible (must be accessed from VPC)
+
+### ElastiCache Overview
+
+RDS is to manage Relational databased, ElastiCache is to manage Redis or Memchached
+- caches are in-memeory databases with really high performance, low latency
+- helps reduce load off of databases for read intensive workloads
+- helps makeyour application stateless
+- aws wil take case of OS maintenance/ patching, optimizations, setup, config, monitoring, failure recovery adn backups
+
+- using ElastiCache involves heavy application code changes 
+
+ElastiCache Solution Architecture - DB Cache:
+- applications queries ElastiCache, if nto available get from RDS and store in ElastCache
+- helps relieve load in RDS
+- cache must have an invalidation strategy to make sure only the most current datais used in there
+
+![elasticache db cache architecture](images/ElastiCachesolutionarchitecture.png)
+
+Elasticache Solution Architecture - user session store:
+- user logs into any of the application
+-the application writes the session data into Elasticache
+- the user hits another instance of our application then the instance retrieves the data and the user is already logged in
