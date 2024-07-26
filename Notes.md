@@ -874,3 +874,13 @@ dynamic scaling policy
 1. simple scaling based on alarm
 2. step scaling if alram hit add 10 units or so
 3. atrget tracking policy
+
+### ASG - Instance Refresh
+
+goal: update launch template and then re-creating all EC2 instances
+
+- for this we can use the native feature of instance refresh
+- setting of minimum healthy percentage
+- specify warm-up time(how long until the instance is ready to use)
+
+ex: min health percentage is 60% so we have all the old template instances, and when we started startInstanceRefresh, it will create a instance with new template and one it takes traffic then it will stop the old instance and the process continues till all old template insatnces are stopped
