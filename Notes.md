@@ -862,3 +862,15 @@ ASG - scaling cooldowns:
 
 - Advice: use a ready to use AMI to reduce configuration time in order to be serving request faster and reduce the cooldown period
 
+ASG Scaling policies hands on:
+
+in ASG got to automatic scaling > create a scheduled action
+- scheduled scaling
+
+now predictive scaling - scale based on forecast
+
+dynamic scaling policy 
+
+1. simple scaling based on alarm
+2. step scaling if alram hit add 10 units or so
+3. atrget tracking policy
