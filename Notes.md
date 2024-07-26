@@ -796,3 +796,33 @@ Feature naming
 
 ![connection draining](images/ELBconnectiondraining.png)
 
+### Auto Scaling Group (ASG) Overview
+
+
+- in real life, the load on your websites and application can change
+- in cloud, you can create and get rid of servers veru quickly
+
+the goal of ASG is to 
+- scale out(add instances) to match an increased load
+- scale in (remove instances) to match a decreased load
+- ensured we have a min and max no of instances running
+- automaticaly register new instance to a LB
+- re-create an instance in case a previous one is terminated (ex: if unhealthy)
+
+ASG are free (you only pay for underlying EC2 instances)
+
+![ASG](images/ASG.png)
+![ASG with LB](images/ASGwithLB.png)
+
+ASG attributes:
+- a launch template (older "launch configurations are deprecated)
+    - AMI + instance types, ec2 user data, ebs volume, SG, SSH key pair, IAM roles for your ec2 instance, network + subnet information, LB information
+- min size/ max size/ initial capacity
+- scaling policies
+
+AS - CloudWatch ALarms & scaling:
+
+- it is possible to scale an ASG based on cloudwatch alarms
+- an alarm monitors a metric (such as avg cpu or a custom metric)
+- metrics such as average CPU are computed for the overall ASG instances
+- based on the alarm: we can create scale out (increase instances) or create scale in policies (decrease instances)
