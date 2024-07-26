@@ -826,3 +826,8 @@ AS - CloudWatch ALarms & scaling:
 - an alarm monitors a metric (such as avg cpu or a custom metric)
 - metrics such as average CPU are computed for the overall ASG instances
 - based on the alarm: we can create scale out (increase instances) or create scale in policies (decrease instances)
+
+ASG hands on:
+
+create a launch template and use this launch template while creating an ASG
+
