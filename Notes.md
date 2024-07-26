@@ -1077,3 +1077,45 @@ Elasticache hands on:
 elasticache > redis caches > create redis cache > design your own cache > easy create > config: demo > auto failover enable - follow process along
 
 ### Elasticache Strategies
+
+
+- Is it safe to cache data? Data may be out of date, eventually consistent
+- Is caching effective for that data?
+    - Pattern: data changing slowly, few keys are frequently needed
+    - Anti patterns: data changing rapidly, all large key space frequently needed
+- Is data structured well for caching?
+    - example: key value caching, or caching of aggregations results
+
+
+Which caching design pattern is the most appropriate?
+
+Lazy Loading/ Cache-Aside/ Lazy Population:
+
+![lazycache](images/lazycache.png)
+
+python pseudocoe:
+![lazycache](images/lazycachecode.png)
+
+Write Through - add o rupdate cache when database is updated
+
+![lazycache](images/writethrough.png)
+
+paseudocode:
+
+![lazycache](images/writethroughcode.png)
+
+Cache Evitions and Time to Live (TTL):
+
+- Cache eviction can occur in three ways:
+    - you can delete an item explicitly in the cache
+    - item is evicted because the memory is full and it's not recently used (LRU - least recently used)
+    - you set an item TTL
+
+- TTL are helpful for any kind of data: like leaderboards, comments , activity streams
+
+- TTL can range from few secs to hours or days:
+
+- if too many evictions happens due to memory, you should scale up(vertical) or out(horizontal)
+
+
+
