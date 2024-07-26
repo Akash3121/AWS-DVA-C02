@@ -1118,4 +1118,10 @@ Cache Evitions and Time to Live (TTL):
 - if too many evictions happens due to memory, you should scale up(vertical) or out(horizontal)
 
 
-
+Final words of wisdom
+- Lazy Loading / Cache aside is easy to implement and works for many situations as a foundation, especially on the read side (read performance)
+- Write-through is usually combined with Lazy Loading as targeted for the queries or workloads that benefit from this optimization
+- Setting a TTL is usually not a bad idea, except when you’re using Write- through. Set it to a sensible value for your application
+- Only cache the data that makes sense (user profiles, blogs, etc...)
+- Quote:There are only two hard things in Computer Science: cache
+invalidation and naming things
