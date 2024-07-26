@@ -737,4 +737,40 @@ Similarly for GWLB
 for ALB, select LB > attributes > cross zone load balancing is on by default
 goto trget group and attributes and edit select off from the drop down
 
-Done till 67
+### ELB SSL certificates
+
+SSL/TLS basics
+
+- An SSL certificate allows traffic b/w your clients and your LB to be encrypted in transit (in- flight encryption)
+
+- SSL (secure socket layer) used to encrypt connections
+- TLS (transport layer security) is a newer version of SSL
+- Nowadays, TLS certificates are mainly used bt people still refer as SSL
+
+- public SSL certificates are issued by Certificate Authorities (CA) like comodo, symantec, godaddy, digicert etc
+
+- SSL certificates have an expiration date (you set) adn myst be renewed
+
+- The load balancer uses an X.509 certificate (SSL/TLS server certificate) 
+- You can manage certificates using ACM (AWS Certificate Manager)
+- You can create upload your own certificates alternatively
+- HTTPS listener:
+    - You must specify a default certificate
+    - You can add an optional list of certs to support multiple domains
+    - Clients can use **SNI** (Server Name Indication) to specify the hostname they reach
+    - Ability to specify a security policy to support older versions of SSL /TLS (legacy clients)
+
+Server Name Indication (SNI): solves the problem of loading multiple SSL certificates onto one web server (to server multiple websites)
+- Its a newer protocol, and requires the client to indicate the hostname of the target server in the initial SSL handshake
+- the server will find the correct certificate or return the default one
+
+Note: only works for ALB & NLB (newer gen), CloudFront
+- do not work for CLB (coz its older gen)
+
+Classic Load Balancer (v1)
+- Support only one SSL certificate
+- Must use multiple CLB for multiple hostname with multiple SSL certificates
+
+Application Load Balancer (v2) & Network Load Balancer (v2)
+- Supports multiple listeners with multiple SSL certificates 
+- Uses Server Name Indication (SNI) to make it work
