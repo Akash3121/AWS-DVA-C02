@@ -794,3 +794,5 @@ Feature naming
 - Set to a low value if your requests are short
 - set to a high value if requests are long like uploading
 
+![connection draining](images/ELBconnectiondraining.png)
+
