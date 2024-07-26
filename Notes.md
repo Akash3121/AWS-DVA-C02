@@ -980,3 +980,38 @@ download the sqlelectron to connect to the RDS.
 to create read replica, go to actions > create read replica
 
 to delete database > goto modify db instance and scroll down to the end > uncheck the enable deletion protection > continue > apply immediately - then you can delete database
+
+### Amazon Aurora
+
+- proprietary software from AWS(not open sourced)
+- Postgres and mysql are both supported as Aurora DB (that means your drivers will work as if aurora was a postgres or mysql databases)
+- aurora is "AWS vloud optimized: and claims 5x performance improvement ove mysql on RDS, over 3x the performance of postgres on RDS
+- aurora storage automatically grows in increments of 10GB, up to 128TB
+- aurora can have up to 15 replicas and the replication process is faster than MySQL
+- failover in aurora is instantaneous. Its high available in nature
+- aurora const more than RDS(20% more) - but is more effiecient
+
+Aurora High Availability and Read Scaling:
+- 6 copies over 3 Azs - means 2 copies on single AZ (highly available)
+    - 4 copoies out of 6 needed for writes
+    - 3 copies out of 6 need for read
+    - self healing with peer-to-peer replication
+    - storage is striped across 100s of volumes
+- one aurora instance takes writes(master)
+- automated failover for master in less than 30 secs
+- master + up to 15 aurora read replicas serve reads
+- support for Cross Region Replication
+> in short, one master and other are replicas, and these replicas take over master incase of failover and storage is gonna be replicated + self healing + auto expanding
+
+Aurora DB Cluster:
+
+![aurora db cluster](images/AuroraDBcluster.png)
+exp: master is the only thing that writes, there would be Writer Endpoint always pointing to the master, even if the master is in failover, clients talk to writer endpoint and it redirects to the right instance. read replicas has autoscaling.now we have autoscaling it will be hard to keep track of the read replicas and their URL and stuff, here comes the Reader Endpoint, it automoatically connects to all read replicas and load balancing dones here onces clients connects to the reader endpoint.
+- Load balancing happens at connection level not at the statement level
+
+features aurora:
+- automatic failover, backup and recovery, isolation and security, indstry compliance, push button scaling, automated patching with zero downtime, advanced monitoring, routine maintenance, backtrack: restore data at any point of time without using backups.
+
+
+
+
