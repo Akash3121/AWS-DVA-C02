@@ -1020,3 +1020,18 @@ once everything is created, there would be onw writer instance and one reader in
 
 or add replica auto scaling (undre actions too)
 
+for deleting first delete reader instance than delete writer instance, then you can delete the cluster
+
+### RDS & Aurora Security
+
+- At-rest encryption:
+    - db master & replicas encryption using AWS KMS - must be defined as launch time
+    - if master is not encrypted , the read replicas cannot be encrypted
+    - to encrypt an un-encrypted database, go through a db snapshot & restore as encrypted
+
+- In-flight encryption: TLS -ready by default, use the AWS TLS root certificates client-side
+- IAM Authentication: IAM roles to connect to your database (instead of username/pw)
+- Security Groups: control network access to your RDS/Aurora DB
+- no SSH available except on RDS custom
+- audit logs can be enabled and sent to cloudwatch Logs for longer retention
+
