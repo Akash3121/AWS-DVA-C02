@@ -1067,3 +1067,8 @@ Elasticache Solution Architecture - user session store:
 - user logs into any of the application
 -the application writes the session data into Elasticache
 - the user hits another instance of our application then the instance retrieves the data and the user is already logged in
+
+Elasticache - Redis vs Memcached:
+
+![Elasticache redivs vs memcached](images/ElastiCache-redisvsmemcached.png)
+
