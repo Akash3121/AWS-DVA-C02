@@ -1035,3 +1035,13 @@ for deleting first delete reader instance than delete writer instance, then you 
 - no SSH available except on RDS custom
 - audit logs can be enabled and sent to cloudwatch Logs for longer retention
 
+### Amazon RDS Proxy
+
+- fully managed db proxy for RDS.
+- allows apps to pool and share db connections established with the database
+- improving db efficiency by reducing the stress on db resources (eg. CPU, RAM) and minimize open connections (and timeouts)
+- serverless, autoscaling, highly available(mulit az)
+- reduced RDS & aurora failover time by up 66%
+- no code changes required for most apps, (insted connecting to RDS db instance you will connect to RDS proxy)
+- enforce IAM authentication for DB, and securely store credentials in AWS secrets manager
+- RDS proxy is never public accessible (must be accessed from VPC)
