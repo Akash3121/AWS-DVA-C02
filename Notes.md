@@ -884,3 +884,43 @@ goal: update launch template and then re-creating all EC2 instances
 - specify warm-up time(how long until the instance is ready to use)
 
 ex: min health percentage is 60% so we have all the old template instances, and when we started startInstanceRefresh, it will create a instance with new template and one it takes traffic then it will stop the old instance and the process continues till all old template insatnces are stopped
+
+---
+***
+
+# Section 8: AWS Fundamentals: RDS + Aurora + ElastiCache
+
+### Amazon RDS Overview
+
+Relational Database Service, RDS is a managed DB for DB use SQL as query language, 
+
+It allows you to create dbs in cloud managed by AWS
+- Postgres, MySQL, MariaDB, Oracle, Microsoft SQL server, IBM DB2, Aurora (AWS proprietary database)
+
+Advantage over using RDS vs deploying DB on EC2.
+RDS is a managed service
+- automated provisioning, OS patching
+- continuous backups and restore to specific timestamp (point in time restore)
+- monitoring dashboards
+- read replicas for improved read performance
+- Multi AZ setup for DR (Disaster Recovery)
+- maintenance windows for upgrades
+- scaling capability (verical and horizontal)
+- storage backed by EBS (gp2 or io1)
+
+But you cant SSH into your instances
+
+RDS - storage Auto scaling:
+- helps you increase storage on RDS DB instance dynamically
+- When RDS detects you are running out of free database storage, it scales automatically, avoid manually scaling your database storage
+- you have to set Maximum Storage Threshold (maximum limit for DB storage)
+- automatically modify storage if:
+    - free storage is less than 10% of allocated storage
+    - low storage lasts at least 5 mins
+    - 6 hours have passed since last modification
+- useful for appplications with unpredictable workloads
+- supports all RDS database engines
+
+
+
+
