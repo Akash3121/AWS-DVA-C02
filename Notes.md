@@ -1125,3 +1125,12 @@ Final words of wisdom
 - Only cache the data that makes sense (user profiles, blogs, etc...)
 - Quote:There are only two hard things in Computer Science: cache
 invalidation and naming things
+
+### Amazon Memory DB for Redis - Overview
+
+
+- Redis-compatible, durable, in-memory database service
+- Ultra-fast performance with over 160 millions requests/second
+- Durable in-memory data storage with Multi-AZ transactional log
+- Scale seamlessly from 10s GBs to 100s TBs of storage
+- Use cases: web and mobile apps, online gaming, media streaming, ...
