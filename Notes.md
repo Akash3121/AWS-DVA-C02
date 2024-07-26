@@ -921,6 +921,21 @@ RDS - storage Auto scaling:
 - useful for appplications with unpredictable workloads
 - supports all RDS database engines
 
+### RDS Read Replicas vs Multi AZ
+
+RDS Read Replicas for read scalability:
+
+- upto 15 read replicas
+- within AZ, cross AZ or cross Region
+- replication is ASYNC, so reads are eventually consistent
+- replicas can be promoted to their own DB
+- application must update the connection string to leverage read replicas
+
+![RDS read relicas scalability](images/RDSreadreplicascalability.png)
 
 
-
+RDS Read replicas - Use cases:
+- you have a production database that is taking on normal load.
+- you want to run a reporting application to run some analytics, if we run directly on the production db, this is gonna overload and we don't want to do that, instead we create a Read Replica to run the new workload there
+- here the production application is unaffected
+- read replicas are used for SELECT (=read) only kind of statements (not insert, update, delete)
