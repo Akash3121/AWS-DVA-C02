@@ -831,3 +831,34 @@ ASG hands on:
 
 create a launch template and use this launch template while creating an ASG
 
+### ASG - scaling policies
+
+- Dynamic Scaling 
+    - Target Tracking Scaling
+        - simple to set-up
+        - ex: i want the average ASG CPU to stay under 40%
+
+    - Simple/ Step Scaling
+        - when a cloud watch alarm is triggered (ex cpu > 70%), then add 2 units
+        - when a cloud watch alarm is triggered (ex cpu < 30%), then remove 1 unit
+
+
+- Scheduled Scaling:
+    - anticipate a scaling basedon known usage patterns
+    - ex: increase the mic capatity to 10 at 5pm on fridays
+
+- predictive scaling: continulously forecast load and schedule scaling ahead
+    - analyze historical load > generate forecast > schedule scaling actions
+
+Good metrics to scale on:
+- CPU utilization: average CPU utilization across your instances
+- RequestCountPerTarget: to make sure the no of requests per Ec2 instace is stable
+- average network in/out (if you're application is network bound)
+- any custom metric (that you push using cloud watch)
+
+ASG - scaling cooldowns:
+- after a scaling activity happens, you are in the cooldown period(default: 300secs)
+- during the cooldown period, the ASG will not launch or terminate additional instances(to allow for metrics to stabilize)
+
+- Advice: use a ready to use AMI to reduce configuration time in order to be serving request faster and reduce the cooldown period
+
