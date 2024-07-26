@@ -939,3 +939,24 @@ RDS Read replicas - Use cases:
 - you want to run a reporting application to run some analytics, if we run directly on the production db, this is gonna overload and we don't want to do that, instead we create a Read Replica to run the new workload there
 - here the production application is unaffected
 - read replicas are used for SELECT (=read) only kind of statements (not insert, update, delete)
+
+![RDS read replica use case](images/RDSreadreplicausecase.png)
+
+RDS Read Replicas - Network Cost:
+In AWS there's a network cost when data goes from one AZ to another.
+- for RDS read replicas within the same region, you don't pay that fee.
+
+Same Region read replica = free
+
+cross region = need to pay the fee
+
+RDS Multi AZ (Disaster Recovery):
+- SYNC replication
+- one DNS name - automatic app failover standby
+- Increases availability
+- Failover in case of loss of AZ, loss of network, instance or storage failure
+- No manual intervention in apps
+- not used for scaling*
+
+![RDS multi az](images/RDSmultiAZ.png)
+
