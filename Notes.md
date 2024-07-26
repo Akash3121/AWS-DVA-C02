@@ -959,4 +959,15 @@ RDS Multi AZ (Disaster Recovery):
 - not used for scaling*
 
 ![RDS multi az](images/RDSmultiAZ.png)
+exp: here if anything happens to master db then the standby database will take over
+
+Note: The read replicas can be setup as Multi AZ for Disaster Recovery (DR)
+
+RDS - from single AZ to multi AZ
+- zero downtime operation (no need to stop the DB)
+- just click on "modify" for the database 
+- the following happens internally:
+    - a snapshot is taken
+    - a new DB is restored from the snapshot in a new AZ
+    - synchronization is established b/w the two dbs
 
