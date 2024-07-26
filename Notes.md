@@ -1072,3 +1072,8 @@ Elasticache - Redis vs Memcached:
 
 ![Elasticache redivs vs memcached](images/ElastiCache-redisvsmemcached.png)
 
+Elasticache hands on:
+
+elasticache > redis caches > create redis cache > design your own cache > easy create > config: demo > auto failover enable - follow process along
+
+### Elasticache Strategies
