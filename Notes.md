@@ -1012,6 +1012,11 @@ exp: master is the only thing that writes, there would be Writer Endpoint always
 features aurora:
 - automatic failover, backup and recovery, isolation and security, indstry compliance, push button scaling, automated patching with zero downtime, advanced monitoring, routine maintenance, backtrack: restore data at any point of time without using backups.
 
+Aurora hands on:
 
+RDS  > create database > standard create > aurora mysql > choose version  > choose prod template > create passwords > cluster storage config - chooose standard > burstable classes > availability and durability > create an aurora replica or reader node in diff az > choose vpc > database port 3306 (mysql port by default)
 
+once everything is created, there would be onw writer instance and one reader instance, you can add reader by clicking actions > add reader
+
+or add replica auto scaling (undre actions too)
 
