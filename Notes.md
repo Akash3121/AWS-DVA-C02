@@ -971,3 +971,12 @@ RDS - from single AZ to multi AZ
     - a new DB is restored from the snapshot in a new AZ
     - synchronization is established b/w the two dbs
 
+Amazon RDS hands on: video 78
+
+RDS > create database > standard create > MySQL  > templates - prod > availability and durability - single/multi az db > create master username and password, follow the process along
+
+download the sqlelectron to connect to the RDS.
+
+to create read replica, go to actions > create read replica
+
+to delete database > goto modify db instance and scroll down to the end > uncheck the enable deletion protection > continue > apply immediately - then you can delete database
