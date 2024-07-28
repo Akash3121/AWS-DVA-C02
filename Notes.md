@@ -1212,3 +1212,8 @@ click on registered domainsunder the domains in the route 53, click on register 
 got the created domain and click on create record
 
 check using nslookup or dig command
+
+### Route 53 - EC2 - Setup
+
+create an ec2 instance without creating key pair - create 3 instances in 3 regions and create an ALB (SG - ssh and http enabled)
+
