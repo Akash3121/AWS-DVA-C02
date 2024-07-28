@@ -1238,3 +1238,35 @@ when we entered the url then it will route us to this ec2 instance
 
 ### CNAME vs Alias
 
+- AWS Resources (Load Balancer, CloudFront...) expose an AWS hostname:
+    -lb1-1234.us-east-2.elb.amazonaws.com and you want myapp.mydomain.com
+
+- CNAME:
+    - Points a hostname to any other hostname. (app.mydomain.com => blabla.anything.com) 
+    - ONLY FOR NON ROOT DOMAIN (aka. something.mydomain.com)
+
+- Alias:
+    - Points a hostname to an AWS Resource (app.mydomain.com => blabla.amazonaws.com)
+    - Works for ROOT DOMAIN and NON ROOT DOMAIN (aka mydomain.com)
+    - Free of charge
+    - Native health check
+
+Alias Records
+- Maps a hostname to an AWS resource
+- An extension to DNS functionality
+- Automatically recognizes changes in the resource’s IP addresses
+- Unlike CNAME, it can be used for the top node of a DNS namespace (Zone Apex), e.g.: example.com
+Amazon Route 53
+- Alias Record is always of type A/AAAA for AWS resources (IPv4 / IPv6)
+- You can’t set the TTL
+
+Alias Records Targets:
+Elastic Load Balancers, CloudFront Distributions, API Gateway, Elastic Beanstalk environments, S3 Websites, VPC Interface Endpoints, Global Accelerator accelerator, Route 53 record in the same hosted zone
+
+- You cannot set an ALIAS record for an EC2 DNS name
+
+hands on =>
+
+creating a CNAME while creating the record 
+
+and while creating an alias just check the toggle button for alias 
