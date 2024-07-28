@@ -1134,3 +1134,28 @@ invalidation and naming things
 - Durable in-memory data storage with Multi-AZ transactional log
 - Scale seamlessly from 10s GBs to 100s TBs of storage
 - Use cases: web and mobile apps, online gaming, media streaming, ...
+
+# Section 9: Route 53
+
+### What is a DNS?
+
+domain name syste - DNS translates the human friendly hostnames into the machine IP addresses
+- ex: www.google.com => 172.17.18.36
+- DNS is the backbone of the internet
+- DNS uses hierarchial naming structure like .com, example.com, www.example.com, api.example.com
+
+DNS Terminologies:
+
+- Registrars: route 53, godaddy, ..
+- DNS records: A, AAAA, CNAME, NS, 
+- Zone File: contains DNS records
+- Name Server: resolves DNS queries (Authoritative or Non- Authoritative)
+- Top Level Domain(TLD): .com, .us, .in, .gov, .org
+- Second Level Domain (SLD): amazon.com, google.com, 
+
+![DNS](images/DNS.png)
+
+How DNS works?
+
+![dns how it works](images/dnshowitworks.png)
+exp: first browser asks local DNS if it doesn't has it will ask the root DNS server, may be it might not know the example.com, but it does know the .com so it will send the .com server 1.2.3.4, then local DNS server will ask the TLD .com server, it will give the ip as 5.6.7.8, then local DNS will ask the SLD DNS server, it will give the correct ip of the hostname it will then give it to the browser, then the browser will route the request to the example.com web server.
