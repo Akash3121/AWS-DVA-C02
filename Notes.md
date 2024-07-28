@@ -1202,3 +1202,7 @@ Hosted Zones:
 - you pay $0.5 per hosted zone
 
 ![public vs private hosted zones](images/route53privatevspublichostedzone.png)
+
+### Route 53 - registering a domain
+
+click on registered domainsunder the domains in the route 53, click on register domain, enter the domain name 
