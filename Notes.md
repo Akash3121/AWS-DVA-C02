@@ -1206,3 +1206,9 @@ Hosted Zones:
 ### Route 53 - registering a domain
 
 click on registered domainsunder the domains in the route 53, click on register domain, enter the domain name 
+
+### Route 53 - creating our first records
+
+got the created domain and click on create record
+
+check using nslookup or dig command
