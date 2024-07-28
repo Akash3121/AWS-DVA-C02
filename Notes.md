@@ -1159,3 +1159,38 @@ How DNS works?
 
 ![dns how it works](images/dnshowitworks.png)
 exp: first browser asks local DNS if it doesn't has it will ask the root DNS server, may be it might not know the example.com, but it does know the .com so it will send the .com server 1.2.3.4, then local DNS server will ask the TLD .com server, it will give the ip as 5.6.7.8, then local DNS will ask the SLD DNS server, it will give the correct ip of the hostname it will then give it to the browser, then the browser will route the request to the example.com web server.
+
+### Route 53 Overview
+
+- a highly available, scalable, fully managed and Authoritative DNS
+    - Authoritative = the customer can update the DNS records
+- route 53 is also a domain registrar
+- ability to check the health of your resources
+- the onlyl AWS service which provided 100% availability SLA
+- why route 53? 53 is the reference to the traditional DNS port
+
+Route 53 - records:
+- how you want to route traffic for a domain
+- each record contains:
+    - domain/subdomain name: eg: example.com
+    - record type. eg: A or AAAA
+    - value- eg: 12.34.56.78
+    - routing policy - how route 53 responds to queries
+    - TTL - amount of time the record cached at DNS resolvers
+- route 53 supports the following DNS record types:
+    - (must know) - A/ AAAA/ CNAME/ NS
+    - (advanced) - CAA/ DS/ MX/ NAPTR/ PTR/ SOA/ TXT/ SPF/ SRV
+
+ROute 53 - record types
+
+- A - maps a hostname to IPv4
+- AAAA - maps a hostname to IPv6
+- CNAME - maps a hostname to another hostname
+    - target is a domain name which must have an A or AAAA record
+    - can't create a CNAME record for the top node of a DNS namespace (Zone Apex)
+    - ex: you can't create for example.com, but you can create for www.example.com
+- NS - name servers for the hosted zone
+    - control how traffic is routed for a domain
+
+Hosted Zones:
+- 
