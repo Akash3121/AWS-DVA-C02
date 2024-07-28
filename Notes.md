@@ -1217,3 +1217,17 @@ check using nslookup or dig command
 
 create an ec2 instance without creating key pair - create 3 instances in 3 regions and create an ALB (SG - ssh and http enabled)
 
+### Route 53 - TTL
+
+![TTL](images/route53-TTL.png)
+
+High TTL – e.g., 24 hr
+- Less traffic on Route 53
+- Possibly outdated records
+
+Low TTL – e.g., 60 sec.
+- More traffic on Route 53 ($$)
+- Records are outdated for less time
+- Easy to change records
+
+Except for Alias records, TTL is mandatory for each DNS record
