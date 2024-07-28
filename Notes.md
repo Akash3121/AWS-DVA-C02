@@ -1231,3 +1231,10 @@ Low TTL – e.g., 60 sec.
 - Easy to change records
 
 Except for Alias records, TTL is mandatory for each DNS record
+
+now hands on: create a record for the domain we created  and the value is the one of the 3 ec2 instances public ip
+
+when we entered the url then it will route us to this ec2 instance
+
+### CNAME vs Alias
+
