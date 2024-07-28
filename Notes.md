@@ -1193,4 +1193,12 @@ ROute 53 - record types
     - control how traffic is routed for a domain
 
 Hosted Zones:
-- 
+- a container for records that define how to route traffic to a domain and its subdomains
+
+- Public Hosted Zones - contains records that specify how to route traffic on the internet ( public domain names)
+    - application1.mypublicdomain.com
+- Private Hosted Zones - contain records that specify how you route traffic within one or more VPCs (private domain name)
+    - application1.company.internal
+- you pay $0.5 per hosted zone
+
+![public vs private hosted zones](images/route53privatevspublichostedzone.png)
