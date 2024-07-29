@@ -1337,3 +1337,15 @@ if we want to check for another resource then use the vpn nearer to the location
     3. health checks that monitor CloudWathc alarms (full control) - eg throttles of dynamodb, alarms on RDS, custom metrics... (helpful for private resources)
 
 - health checks are integrated with cloudwatch metrics.
+
+1. Health Checks - monitor an end point: 
+- about 15 global health checkers will check the endpoint health
+    - healthy/unhealthy threshold - 3 default
+    - interval - 30 sec ( can set to 10 sec - higher cost)
+    - supported protocol: HTTP, HTTPS, TCP 
+    - if > 18% of helath checkers report the endpoint is helathy, route 53 considers it healthy, otherwise its unhealthy
+    - ability to choose which locations you want route 53 to use
+- helath checks pass only when the endpoint responsds with 2xx and 3xx status codes
+-health checks can be setup to pass/fail based on the text in the first 5|20 bytes of the response.
+- configure you router/firewall to allow incomin request from route 53 health checkers.
+
