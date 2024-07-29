@@ -1537,3 +1537,22 @@ VPC Flow Logs
     - internet to subnet
 - captures network information from AWS managed interfaces too: ELB, ElastiCache, RDS, Aurora etc
 - VPC flow logs data can go to S3, CloudWatch Logs, and Kinesis Data Firehouse
+
+
+### VPC Peering, Endpoints, VPN, DX
+
+VPC Peering:
+- connect two VPC, privately using AWS network
+- make them behave as they were in the same network
+- must not have overlapping CIDR (IP address range)
+- VPC peering connection is not trasitive (must be established for each VPC that need to communicate with one another)
+    - means for ex VPC A and VPC B are in peering, then VPC A and VPC C are in peering, then VPC B and VPC C are not connected we need to create a peering bw B and C 
+
+VPC Endpoints:
+- endpoints allow you to connect to AWS services using a private network instead of the public www network.
+- this gives you enhanced security and lower latency to access AWS services.
+- VPC endpoint gateway: S3 & DynamoDB
+- VPC Endpoint Interface: the rest
+- only used within your VPC
+
+![vpc endpoints](images/VPCendpoints.png)
