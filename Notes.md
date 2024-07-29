@@ -1414,3 +1414,17 @@ exp: no bias
 
 ![geo proximity no bias](images/geoproximityhighbias.png)
 exp: high bias
+
+### Routing Policy - Traffic Flow and geoproximity Hands on
+
+Traffic Flow
+- simplify the process of creating and maintaining records in large and complex configurations
+- visual editor(UI based) to manage complex routing decision trees
+- Confirutations can be saved as **Traffic Flow Policy**
+    - can be applied to different route 53 hosted zones(diff domain names)
+    - suppports versioning
+
+hands on: on the left hand side on the route 53 dashobard under the traffic flow, there would be traffic policies
+create traffic policy add a dns type, then connect to anything
+
+try creating a geoproximity code, add bias and 
