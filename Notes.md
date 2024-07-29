@@ -1374,3 +1374,7 @@ and to check unhealth , change the inboud rule to not allow http requests then a
 
 3. for private hosted zones we are supposed to reate a cloudwatch alarm and then health check on that alarm
 
+### Routing policies - Failover (active - passive)
+
+![fail over](images/helathcheck-failover.png)
+
