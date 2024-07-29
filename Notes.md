@@ -1355,3 +1355,9 @@ if we want to check for another resource then use the vpn nearer to the location
 - can monitor up to 256 child health checks
 - specify how many of the health checks need to pass to make the parent pass
 - usage: perform maintenance to your website without causing all health checks to fail
+
+3. private hosted zones:
+- route 53 health checkers are outside the VPC
+- they can't access private endpoints (private VPC or on-premises resource)
+
+- you can create a CloudWatch Metrci and associate a CloudWatch Alarm, then create a health check that checks the alarm itself
