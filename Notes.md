@@ -1294,3 +1294,6 @@ Simple:
 - when Alias enabled, specify only one AWS resource 
 - can't be associated with health checks
 
+hands on: while creating the record, there would be routing policy drop down box choose simple
+
+to check the ip we need to use the dig command, but in cloudshell dig wouldn't be there so to install it use this command "sudo yum install bind-utils"
