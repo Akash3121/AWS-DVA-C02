@@ -1475,3 +1475,36 @@ then delete all hosted zones and the domain
 
 # Section 10: VPC Fundamentals
 
+### Section Intro
+
+- VPC is something you should know in depth for the AWS ertified solutions architecht associate & AWS certified sysops administrator
+
+- at the AWS certified developer level, you should know about:
+    - vpc, subnets, internet gatewaus & NAT gateways
+    - security groups, network ACL (NACL), VPC Flow Logs
+    - VPC peering, VPC Endpoints
+    - site to site VPN & Direct Connect
+
+### VPC, Subnets, IGW and NAT
+
+VPC & Subnet primer
+- VPC: private network to deply your resources (regional resource)
+- Subnets allow you to partition your network inside your VPC (AZ resource)
+- A public subnet is a subnet that is accessible from the internet
+- A private subnet is a subnet that is not accessible from internet
+- to define access to the internet and bw subnets, we use **route tables**.
+
+VPC Diagram
+
+![VPC](images/vpc.png)
+
+Internet Gateway & NAT Gateway:
+
+- Internet Gateways helps our VPC instances connect with the internet.
+- public subnets have a route to the internet gateway.
+
+
+- NAT Gateways (AWS managed) & NAT Instances (self -managed) allow your instances in your private subnets to access the internet while remaining private
+
+![IGW & NAT](images/IGW&NAT.png)
+
