@@ -1464,3 +1464,11 @@ Domain Registar vs. DNS Service
 
 - Domain Registrar != DNS Service
 - But every Domain Registrar usually comes with some DNS features
+
+### route 53- section cleanup
+
+terminate all ec2 instance, delete LB also and delete target group too
+
+if the ec2 are in diff region then goto that region and then delete instancees over there
+
+then delete all hosted zones and the domain
