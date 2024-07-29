@@ -1390,3 +1390,8 @@ create another record as like a back up, once the first one is unhealthy it will
 - should create a "default" record (in case there's no match on location)
 - user cases: website localization, restrict content distribution, load balancing,..
 - can be associated with Health Checks
+
+hands on: create a record and choose geolocation as routing policy and choose location
+- create multiple records with places
+- use vpn to try/check
+
