@@ -1472,3 +1472,6 @@ terminate all ec2 instance, delete LB also and delete target group too
 if the ec2 are in diff region then goto that region and then delete instancees over there
 
 then delete all hosted zones and the domain
+
+# Section 10: VPC Fundamentals
+
