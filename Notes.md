@@ -1378,3 +1378,7 @@ and to check unhealth , change the inboud rule to not allow http requests then a
 
 ![fail over](images/helathcheck-failover.png)
 
+hands on fail over:
+need to create a new record , select failover under the routing policy 
+create another record as like a back up, once the first one is unhealthy it will route to the back up one 
+
