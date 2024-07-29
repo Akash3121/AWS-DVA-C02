@@ -1270,3 +1270,27 @@ hands on =>
 creating a CNAME while creating the record 
 
 and while creating an alias just check the toggle button for alias 
+
+### Routing policy - Simple
+
+- Define how Route 53 responds to DNS queries
+- Don’t get confused by the word “Routing”
+    -   It’s not the same as Load balancer routing which routes the traffic
+    - DNS does not route any traffic, it only responds to the DNS queries
+
+Route 53 Supports the following Routing Policies
+• Simple
+• Weighted
+• Failover
+• Latency based
+• Geolocation
+• Multi-Value Answer
+• Geoproximity (using Route 53 Traffic Flow feature)
+
+Simple:
+- route traffic to a single resource
+- can specify multiple values in the same record
+- if multiple values are retured, a random one is chosen by the client from those multiple retured values
+- when Alias enabled, specify only one AWS resource 
+- can't be associated with health checks
+
