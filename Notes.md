@@ -1297,3 +1297,17 @@ Simple:
 hands on: while creating the record, there would be routing policy drop down box choose simple
 
 to check the ip we need to use the dig command, but in cloudshell dig wouldn't be there so to install it use this command "sudo yum install bind-utils"
+
+### Routing POlicy - Weighted
+
+- control the % of the requests that go to each specific reasource
+- assign each record a relative weight:
+    traffic (%) = weight for a specific record / sum of all the weights for all records
+
+- dns records must have the same name and type 
+- can be associated with health checks
+- use cases: load balancing bw regions, testing new application versions...
+
+- assign a weigh of 0 to a record to stop sending traffic to a resource
+- if all records have weight of 0, then all records will be returned equally.
+
