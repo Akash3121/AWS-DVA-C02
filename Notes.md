@@ -1586,3 +1586,20 @@ VPC Closing Comments:
 - Site to Site VPN: VPN over public internet between on-premises DC and AWS 
 - Direct Connect: direct private connection to a AWS
 
+### Three tier architecture
+
+![three tier architecture](images/3tierarchitecture.png)
+
+LAMP Stack on EC2
+
+- linux: os for ec2 instance
+- apache: web server that run on linux(EC2)
+- MySQL: database on RDS
+- PHP: Application Logic(running on EC2)
+
+- can add Rdis/Memcached (ElastiCache) to include a caching tech
+- to store local application data & software: EBS drive (root)
+
+WordPress on AWS:
+![wordpress](images/wordpressarchitecture.png)
+exp: ENI is elasti network interface
