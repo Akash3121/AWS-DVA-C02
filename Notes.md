@@ -1430,3 +1430,10 @@ create traffic policy add a dns type, then connect to anything
 try creating a geoproximity code, add bias based on the bias we will get the imaged based geoproximity map
 
 create a traffic policy and check using the vpn
+
+### Routing Policies - IP based Routing
+
+- based on client's IP addresses
+- you provide a list of CIDRs for your clients and the corresponding endpoints/locations (user-IP-to-endpoint mappings)
+- use cases: optimizes performance, reduce network costs..
+- ex: route end users from a particular ISP to a specific endpoint
