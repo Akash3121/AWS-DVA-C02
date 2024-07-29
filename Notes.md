@@ -1349,3 +1349,9 @@ if we want to check for another resource then use the vpn nearer to the location
 -health checks can be setup to pass/fail based on the text in the first 5|20 bytes of the response.
 - configure you router/firewall to allow incomin request from route 53 health checkers.
 
+2. caluclated health checks: 
+- conbine the results of multiple health checks in to a single health check 
+- you can use OR, AND or NOT
+- can monitor up to 256 child health checks
+- specify how many of the health checks need to pass to make the parent pass
+- usage: perform maintenance to your website without causing all health checks to fail
