@@ -1314,3 +1314,11 @@ to check the ip we need to use the dig command, but in cloudshell dig wouldn't b
 hands on: use weighted while creating, and afte it's done, click on add another record and use the same name to create the record, but change the weight value
 
 to check use dig command
+
+### Routing Policy - Latency - based
+
+- redirect to the resource that has the least latency close to us.
+- super helpful when latency for users is a priority
+- Latency is based on the traffic bw users and AWS regions.
+    ex: Germany users may be directd to the US (if that's the lowest latency)
+- can be associated with health checks ( has a failover capability)
