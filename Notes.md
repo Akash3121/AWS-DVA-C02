@@ -1556,3 +1556,16 @@ VPC Endpoints:
 - only used within your VPC
 
 ![vpc endpoints](images/VPCendpoints.png)
+
+Site to Site VPN & Direct Connect:
+
+- Site to Site VPN
+    - connect an on-premise VPN to AWS
+    - the connection is automatically encrypted
+    - goes over the public internet
+
+- Direct connect (DX):
+    - establish a physical connection bw on-premises and AWS 
+    - the connection is private, secure and fast
+    - goes over a private network
+    - takes atleast a month to establish
