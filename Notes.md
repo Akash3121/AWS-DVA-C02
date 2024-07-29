@@ -1382,3 +1382,11 @@ hands on fail over:
 need to create a new record , select failover under the routing policy 
 create another record as like a back up, once the first one is unhealthy it will route to the back up one 
 
+### Routing Policy - Geolocation
+
+- different from Latency-based
+- this is based on user location
+- specify location by continent, countr or by US state (if ttheres overlapping most precise location selected)
+- should create a "default" record (in case there's no match on location)
+- user cases: website localization, restrict content distribution, load balancing,..
+- can be associated with Health Checks
