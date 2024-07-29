@@ -1395,3 +1395,22 @@ hands on: create a record and choose geolocation as routing policy and choose lo
 - create multiple records with places
 - use vpn to try/check
 
+### Routing Policy - Geoproximity
+
+- route traffic to your resources based on the geographic location of users and resources
+- ability to shift more traffic to resources based on the defined bias.
+- to change the size of the geographic region, specify bias values:
+    - to expand (1 to 99) - more traffic to resource
+    - to shrink (-1 to -99) - less traffic to resource
+
+- resources can be:
+    - aws resources (specify AWS region)
+    - Non- AWS resources (specify Latitude and Longitude)
+
+- you must use Route 53 Traffic Flow (advanced) to use this feature
+
+![geo proximity no bias](images/geoproximitynobias.png)
+exp: no bias
+
+![geo proximity no bias](images/geoproximityhighbias.png)
+exp: high bias
