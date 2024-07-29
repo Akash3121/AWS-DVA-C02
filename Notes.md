@@ -1327,3 +1327,13 @@ hands on: use latency as a routing policy dropdown box, created in 3 different r
 
 if we want to check for another resource then use the vpn nearer to the location/region that we created
 
+### Route 53 - Health Checks
+
+- HTTP Health Checks are only for public resources
+- Health Checks => automated DNS failover:
+    
+    1. health checks that monitor an endpoint (application, server, other applications)
+    2. Helath checks that monitor other health checks (caluclated health checks)
+    3. health checks that monitor CloudWathc alarms (full control) - eg throttles of dynamodb, alarms on RDS, custom metrics... (helpful for private resources)
+
+- health checks are integrated with cloudwatch metrics.
