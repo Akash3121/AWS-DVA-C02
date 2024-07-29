@@ -1322,3 +1322,8 @@ to check use dig command
 - Latency is based on the traffic bw users and AWS regions.
     ex: Germany users may be directd to the US (if that's the lowest latency)
 - can be associated with health checks ( has a failover capability)
+
+hands on: use latency as a routing policy dropdown box, created in 3 different regions, when we use the dig command we will get only one as it is the nearest one
+
+if we want to check for another resource then use the vpn nearer to the location/region that we created
+
