@@ -1311,3 +1311,6 @@ to check the ip we need to use the dig command, but in cloudshell dig wouldn't b
 - assign a weigh of 0 to a record to stop sending traffic to a resource
 - if all records have weight of 0, then all records will be returned equally.
 
+hands on: use weighted while creating, and afte it's done, click on add another record and use the same name to create the record, but change the weight value
+
+to check use dig command
