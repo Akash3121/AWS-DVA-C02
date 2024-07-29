@@ -1427,4 +1427,6 @@ Traffic Flow
 hands on: on the left hand side on the route 53 dashobard under the traffic flow, there would be traffic policies
 create traffic policy add a dns type, then connect to anything
 
-try creating a geoproximity code, add bias and 
+try creating a geoproximity code, add bias based on the bias we will get the imaged based geoproximity map
+
+create a traffic policy and check using the vpn
