@@ -1361,3 +1361,16 @@ if we want to check for another resource then use the vpn nearer to the location
 - they can't access private endpoints (private VPC or on-premises resource)
 
 - you can create a CloudWatch Metrci and associate a CloudWatch Alarm, then create a health check that checks the alarm itself
+
+Route 53 - health checks hands on:
+
+route 53 > dashboard > create health check 
+
+1. create end point health check for the 3 ip's 
+
+and to check unhealth , change the inboud rule to not allow http requests then after some time it wil be unhealthy
+
+2. create an calucated health check on te previous created health check
+
+3. for private hosted zones we are supposed to reate a cloudwatch alarm and then health check on that alarm
+
