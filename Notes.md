@@ -1508,3 +1508,32 @@ Internet Gateway & NAT Gateway:
 
 ![IGW & NAT](images/IGW&NAT.png)
 
+### NACL, SG, VPC Flow Logs
+
+Network ACL & SGs:
+
+NACL:
+- firewall which controls traffic from and to subnet
+- can have ALLOW and DENY rules
+- are attached at the **Subnet level**
+- rules only included IP addresses
+
+SGs:
+- firewall that controls traffic to and from an ENI/an ec2 instance
+- can have only ALLOW rules
+- rules include IP addresses and other security groups
+
+![NACL and SG image](images/NACL-SG-image.png)
+![NACL and SG image](images/NACLvsSG.png)
+
+VPC Flow Logs
+- capture information about IP traffic going into your interfaces:
+    - VPC flow logs
+    - Subnet Flow Logs
+    - Elastic Network Interface Flow Logs
+- helps to monitor & troubleshoot connectivity issues. Examples:
+    - why subnet cannot access to internet (subnet to internt)
+    - subnet to subnets
+    - internet to subnet
+- captures network information from AWS managed interfaces too: ELB, ElastiCache, RDS, Aurora etc
+- VPC flow logs data can go to S3, CloudWatch Logs, and Kinesis Data Firehouse
