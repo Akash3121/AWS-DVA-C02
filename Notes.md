@@ -1437,3 +1437,13 @@ create a traffic policy and check using the vpn
 - you provide a list of CIDRs for your clients and the corresponding endpoints/locations (user-IP-to-endpoint mappings)
 - use cases: optimizes performance, reduce network costs..
 - ex: route end users from a particular ISP to a specific endpoint
+
+### Routing policies - Multi-value
+
+- use when routing traffic to multiple resources
+- route 53 return multiple values/resources
+- can be associated with health checks (return only values for healthy resources)
+- up to 8 healthy records are returned for each multi-value query
+- multi-value is not a substitute for having an ELB
+
+hands on: while creating a record select multivalue answer, add some other records
