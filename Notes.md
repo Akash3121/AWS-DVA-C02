@@ -1867,3 +1867,4 @@ create a bucket > add files > goto properties and choose storage class
 
 goto properties > edit storage classes to change the storage classes
 
+goto management > lifecycle rules > create lifecycle rules > choose the life cycle rule action
