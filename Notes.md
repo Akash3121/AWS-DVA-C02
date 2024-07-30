@@ -1665,3 +1665,47 @@ open amazon s3> buckets > create bucket
 after creating, you can open the bucket and upload a file: upload > add file
 
 you can create a folder and upload the files to this
+
+### S3 Security: Bucket Policy
+
+- User-based
+    - IAM policies - which API calls should be allowed for a specific user for IAM
+
+- Resource-based
+    - bucket policies - bucket wide rules from the s3 console -allow cross account
+    - Object ACL - finer grain (can be disabled)
+    - Bucket ACL - less common (can be disabled)
+
+Note: an IAM principal can access an S3 object if 
+    - the user IAM permissions ALLOW it OR the resource policy ALLOWS it
+    - AND there's no explicit DENY
+
+Encryption: encrypt obejects in Amazon S3 using encryption keys
+
+Bucket Policies:
+- JSON based policies
+    - resources; buckets and objects 
+    - Effect: Allow/Deny
+    - actions: set of API to Allow or deny
+    - principal: the account or user to apply the policy to 
+
+- use s3 bucket for policy to:  
+    - Grant public access to the bucket
+    - force objects to be encrypted at upload
+    - Grant access to another account (Cross Account)
+
+ex: public access  - use bucket policy
+- we will create a s3 bucket policy allows public access(hands on)
+
+ex: user access to s3 - IAM permissions
+first create a IAM user with the IAM permissios to access the bucket
+
+ex: EC2 instance access - Use IAM Roles
+- for ec2 instance to access the s3 bucket, first we create an ec2 instance role with IAM permissions,
+
+advanced: cross account access - use bucket policy
+- IAM user with other AWS account, and we will create a bucket policy to allow cross account (to allow the specific IAM user)
+
+Bucket settings for Block Public Access:
+- these settings were created to prevent company data leaks
+- if you know your bucker should never be public, leave these on
