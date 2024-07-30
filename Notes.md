@@ -1834,4 +1834,19 @@ S3 storage classes - Infrequent access  (IA)
     - high durability (99.999999999%) in a single AZ, data lost when AZ is destroyedd
     - 99.5% availability
     - use cases: storing secondaru backup copies of on-premises data, or data you can recreate
-    
+
+Amazon s3 Glacier storage classes
+- low cost object storage meant for archiving / backup
+- pricing: price for storage + object retrieval cost
+
+Amazon s3 glacier instant retrieval
+- milliseconds retrieval, great for data accessed once a quarter
+- min storage duraiton of 90 days
+
+Amazon s3 glacier flexible retrieval (formerly amaon s3 glacier):
+- expedited ( 1 - 5 mins), standard (3 to5 hours), bulk (5 to 12 hours) - free
+- min storage duration of 90 days
+
+Amazon s3 glacier deep archive - for long term storage:
+- standard (12 hours), bulk(48hrs)
+- min storage duration of 180days
