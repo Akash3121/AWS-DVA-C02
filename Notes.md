@@ -1726,4 +1726,8 @@ S3 - Static Weebsite Hosting
 
 - if you get a 403 forbidden error, make sure the bucket policy allows public reads!
 
+S3 Website hands on: video 118:
+
+- upload some files, goto properties and scroll to the end there would be static website hosting, click and enable it, upload the index.html
+- once you come back you can see the link for static website opent he link you will be able to access it
 
