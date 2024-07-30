@@ -1860,3 +1860,10 @@ S3 Intelligent Tiering
 - archive instant access tier (automatic): objects not accessed for 90days
 - archive access tier(optional): configurable from 90 days to 700+ days
 - deep archive access tier (optional): config from 180 days to 700+ days
+
+### S3 storage classes hands on:
+
+create a bucket > add files > goto properties and choose storage class
+
+goto properties > edit storage classes to change the storage classes
+
