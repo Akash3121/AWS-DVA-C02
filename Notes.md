@@ -1731,3 +1731,16 @@ S3 Website hands on: video 118:
 - upload some files, goto properties and scroll to the end there would be static website hosting, click and enable it, upload the index.html
 - once you come back you can see the link for static website opent he link you will be able to access it
 
+### S3 Versioning
+
+- you can version your files in S3
+- it is enabled at the bucket level
+- same key overwrite will change the "version": 1,2,3..
+- it is best practise to version your buckets
+    - protect against unintended deletes (abilities to restore a version)
+    - easy roll back to previous version
+- Notes:    
+    - any file that is not versioned prior to enabling versioning will have version "null"
+    - suspending versioning does not delete the previous versions
+
+
