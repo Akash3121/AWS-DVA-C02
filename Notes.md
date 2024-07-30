@@ -1790,3 +1790,48 @@ Amazon S3 – Replication (Notes)
 - we need 2 buckets in different regions, first enable bucket versioning
 - goto management, scroll down there would be > create replication rule > add the other bucket name it will give the either CRR or SRR based on the region of the bucket, > in IAM role create a new IAM role
 
+### S3 storage classes overview
+
+Storage classes
+- S3 standard - general purpose
+- s3 standard-infrequent access (IA)
+- s3 one zone- infrequent access
+- s3 glacier instant retrieval
+- s3 glacier flexible retrieval
+- s3 glacier deep archive
+- s3 intelligent tiering
+
+- can move bw classes manually or using s3 lifecycle configurations
+
+S3 Durability and Availability:
+
+Durability:
+- High durability (99.999999999%, 11 9’s) of objects across multiple AZ
+- If you store 10,000,000 objects with Amazon S3, you can on average expect to incur a loss of a single object once every 10,000 years
+- Same for all storage classes
+
+Availability:
+- Measures how readily available a service is
+- Varies depending on storage class
+- Example: S3 standard has 99.99% availability = not available 53 minutes a year
+
+S3 standard _ general purpose 
+- 99.99% availability
+- used for frequently accessed data
+- low latency and high throughput
+- sustain 2 concurrent facility failures
+- use cases: big data analytics, mobile & gaming applciations, content distribution..
+
+S3 storage classes - Infrequent access  (IA)
+- for data that is less frequently accessed, but requires rapid access when needed
+- lower cost than s3 standard
+
+- Amazon s3 standard - IA (s3 standard - IA)
+    - 99.9% availability
+    - use cases: disaster recovery, backups
+
+- amazon s3 one zone - IA (s3 one zone - IA)
+    - high durability (99.999999999%) in a single AZ, data lost when AZ is destroyedd
+    - 99.5% availability
+    - use cases: storing secondaru backup copies of on-premises data, or data you can recreate
+    
