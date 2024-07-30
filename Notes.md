@@ -1709,3 +1709,7 @@ advanced: cross account access - use bucket policy
 Bucket settings for Block Public Access:
 - these settings were created to prevent company data leaks
 - if you know your bucker should never be public, leave these on
+
+S3 Security: Bucket Policy Hands on:
+
+to make the uplodaed file can view by public, 
