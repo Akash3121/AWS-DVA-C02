@@ -1603,3 +1603,56 @@ LAMP Stack on EC2
 WordPress on AWS:
 ![wordpress](images/wordpressarchitecture.png)
 exp: ENI is elasti network interface
+
+# Section 11: Amazon S3 Introduction
+
+### S3 Overview
+
+- S3 is one of the main building blocks of AWS
+- its advertising as "Infinitely Scaling" storage
+- many websites use S3 as a backbone, and many AWS services use Amazon S3 as an integratoin as well.
+
+Usecases:
+- backup and storage
+- disaster recovery
+- archive
+- hybird cloud storage
+- application hosting
+- media hosting
+- data lakes & big data analytics
+- software delivery
+- static website
+
+S3 - Buckets:
+- it allows people to store objects (files) in "buckets"(directories)
+- buckets must have a globally unique name(across all regions all accounts)
+- buckets are defined at the region level
+- s3 looks like a global service but buckets are created in a region
+- Naming Convention
+    - no uppercase, no underscore
+    - 3-63 characters long
+    - not an IP
+    - Must start with lowercase letter or number
+    - must not start with an perfix xn-
+    - must not end with suffix -s3alias
+
+s3 - Object:
+
+- objects (files) have a key.
+- the key is the FULL path:
+    - s3://my-bucket/my_file.txt
+    - s3://my-bucket/my_folder/another_folder/my_file.txt
+- key is composed of prefix + object name
+    - s3://my-bucket/my_folder/another_folder/my_file.txt
+    - for this ex: prefix is my_folder/another_folder and object name is my_file.txt
+
+- there is no concept of "directories" within buckets (although the UI will trick you to think otherwise)
+- just keys with very long names that contain slashes ("/")
+
+- object values are the content of the bodu:
+    - max object size is 5TB (5000GB)
+    - if uploading more than 5GB, must use "multi-part upload"
+
+- Metadata (list of text key/ value pairs - system or user metadata)
+- tags (unicode key/ value pair - up to 10) - useful for security / lifecycle
+- version ID (if versioning is enabled)
