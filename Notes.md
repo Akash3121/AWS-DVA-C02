@@ -1712,4 +1712,18 @@ Bucket settings for Block Public Access:
 
 S3 Security: Bucket Policy Hands on:
 
-to make the uplodaed file can view by public, 
+to make the uplodaed file can view by public, > go to the bucket >permissions>  edit block public access - change the permissions > scroll down click edit - see teh examples and use the policy generator, ARN must be the bucketname/* - generate a policy and add and save cahnges
+
+### S3 Website Overview
+
+S3 - Static Weebsite Hosting
+
+- s3 can host static websites and have them accessible on the internet.
+- the website URL will be (depending on the region)
+    - http://bucket-name.s3-website-aws-region.amazonaws.com or
+    - http://bucket-name.s3-website.aws-region.amazonaws.com
+    - the difference bw them is webite-aws and website.aws
+
+- if you get a 403 forbidden error, make sure the bucket policy allows public reads!
+
+
