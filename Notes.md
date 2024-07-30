@@ -1784,3 +1784,9 @@ Amazon S3 – Replication (Notes)
 - There is no “chaining” of replication
     - If bucket 1 has replication into bucket 2, which has replication into bucket 3
     - Then objects created in bucket 1 are not replicated to bucket 3
+
+### S3 replication hands on
+
+- we need 2 buckets in different regions, first enable bucket versioning
+- goto management, scroll down there would be > create replication rule > add the other bucket name it will give the either CRR or SRR based on the region of the bucket, > in IAM role create a new IAM role
+
