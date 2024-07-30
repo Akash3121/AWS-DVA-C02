@@ -1752,3 +1752,22 @@ S3 versioning hands on: video 120
 
 - if you delete a file that does not have versions, in the general thing it will nothing, but in the versions page it will show as the deletemarker in the type for that file
     - delete the deletemarker file so you can see the file again
+
+### S3 Replication
+
+CRR & SRR
+
+ex: if we have a s3 bucket in eu-west-1 and s3 bucket in us-east-1, then an asynchronous replication happens
+
+- must enable versioning in source and destination buckets
+- cross region replication(CRR)
+- same region replication(SRR)
+- buckets can be in diff AWS accounts
+- copying is asynchronous
+- must give proper IAM permissions to S3
+
+Use cases:
+- CRR: complicance, lower latency access, replication across accounts
+- SRR: log aggregation, live replication bw production and test accounts
+
+
