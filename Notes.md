@@ -1844,9 +1844,19 @@ Amazon s3 glacier instant retrieval
 - min storage duraiton of 90 days
 
 Amazon s3 glacier flexible retrieval (formerly amaon s3 glacier):
-- expedited ( 1 - 5 mins), standard (3 to5 hours), bulk (5 to 12 hours) - free
+- expedited ( 1 - 5 mins), standard (3 to5 hours), bulk (5 to 12 hours) - free (only bulk is free)
 - min storage duration of 90 days
 
 Amazon s3 glacier deep archive - for long term storage:
 - standard (12 hours), bulk(48hrs)
 - min storage duration of 180days
+
+S3 Intelligent Tiering
+- small monthly monitoring and auto-tiering fee
+- move objects automatically bw access tiers based on usage
+- there are no retrieval charges in s3 intelligent tiering
+- frequent access tier (automatic): default tier
+- infrequent access tier (automatic): objects not accessedd for 30 days
+- archive instant access tier (automatic): objects not accessed for 90days
+- archive access tier(optional): configurable from 90 days to 700+ days
+- deep archive access tier (optional): config from 180 days to 700+ days
