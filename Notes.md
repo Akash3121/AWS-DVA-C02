@@ -1656,3 +1656,12 @@ s3 - Object:
 - Metadata (list of text key/ value pairs - system or user metadata)
 - tags (unicode key/ value pair - up to 10) - useful for security / lifecycle
 - version ID (if versioning is enabled)
+
+S3 hands on: video 114:
+
+open amazon s3> buckets > create bucket
+- choose general purpose, create a new name that no one has used before.
+
+after creating, you can open the bucket and upload a file: upload > add file
+
+you can create a folder and upload the files to this
