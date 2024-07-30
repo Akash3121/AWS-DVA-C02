@@ -1743,4 +1743,12 @@ S3 Website hands on: video 118:
     - any file that is not versioned prior to enabling versioning will have version "null"
     - suspending versioning does not delete the previous versions
 
+S3 versioning hands on: video 120
 
+- goto bucket and edit bucket versioning, enable it, 
+- add some same name files and see in the bucket, (you should click the toggle to show versions) and then you will see the versions inthe bucket page
+
+- to rollback to the older version, select the version and click delete and enter permanently delete
+
+- if you delete a file that does not have versions, in the general thing it will nothing, but in the versions page it will show as the deletemarker in the type for that file
+    - delete the deletemarker file so you can see the file again
