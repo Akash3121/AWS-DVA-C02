@@ -1908,3 +1908,15 @@ once we are in the terminal if we use cat credentials command we will get the ac
 - to regular configure we use the aws configure command
 - but to create a profile use aws configure --profile my-other-aws-account command, then it will ask for Keys insert by creating from the AWS management console
 - if we use the cat creadetials now we have the other creds too
+
+### AWS CLI with MFA
+
+- to use MFA with the CLI, you must create a temporary session
+- to do so , you must run the STS GettSessionToken API call
+- aws sts get-session-token --serial-number arn-of-the-mfa-device --token-code code-from-token --duration-seconds 3600
+
+got to users and stephane user and create /assign an MFA to the user then we will get the arm token copy it
+    - aws sts get-session-token --serial-number arn:aws:iam::387125123361:mfa/stephane --token-code 828678
+- here token code is the one we see on authy/google authenticator ap and the arn:aws thingy is from the copied virtual MFA one, once we enter the link and hit enter we will get the temporaru access key secret key and session token and stuff that we can use
+- create a profile using aws configure --profile mfa
+- then cat ~/.aws/credentials then add the aws_session_token and save, then once we use any thing it will use this temporary codes
