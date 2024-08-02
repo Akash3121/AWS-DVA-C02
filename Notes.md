@@ -1868,3 +1868,24 @@ create a bucket > add files > goto properties and choose storage class
 goto properties > edit storage classes to change the storage classes
 
 goto management > lifecycle rules > create lifecycle rules > choose the life cycle rule action
+
+# Section 12: AWS CLI, SDK, IAM Roles & Policies
+
+### AWS EC2 Instance Metadata
+
+
+- AWS EC2 Instance Metadata (IMDS) is powerful but one of the least known features to developers
+- It allows AWS EC2 instances to ”learn about themselves” without using an IAM Role for that purpose.
+- The URL is http://169.254.169.254/latest/meta-data
+- You can retrieve the IAM Role name from the metadata, but you CANNOT
+retrieve the IAM Policy.
+- Metadata = Info about the EC2 instance
+- Userdata = launch script of the EC2 instance
+
+IMDSv2 vs IMDSv1
+- IMDSv1 is accessing http://169.254.169.254/latest/meta-data directly • - IMDSv2 is more secure and is done in two steps:
+    1. Get Session Token (limited validity) – using headers & PUT
+        $ TOKEN=`curl -X PUT "https://160.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 21600"`
+    2. Use Session Token in IMDSv2 calls – using headers
+        $ curl http://169.254.169.254/latest/meta-data/profile -H "X-aws-ec2-metadata-token: $TOKEN"
+NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com
