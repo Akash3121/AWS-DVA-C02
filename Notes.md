@@ -1889,3 +1889,14 @@ IMDSv2 vs IMDSv1
     2. Use Session Token in IMDSv2 calls – using headers
         $ curl http://169.254.169.254/latest/meta-data/profile -H "X-aws-ec2-metadata-token: $TOKEN"
 NOT FOR DISTRIBUTION © Stephane Maarek www.datacumulus.com
+
+EC2 Instance Metadata Handson:
+
+- create an new instance, open advanced and then you can see metadata version and stuff
+- when using IMDSv2 and using the general one http://169.254.169.254/latest/meta-data with curl it will give 401 unauthorized in Amazon linux 2023
+- first create a token using this TOKEN=`curl -X PUT "https://160.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 21600"` and then if you want to check to check the token use this command echo $TOKEN, then use this command $ curl http://169.254.169.254/latest/meta-data/profile -H "X-aws-ec2-metadata-token: $TOKEN" then vill get all the data
+
+Note: add trailing / at the end for the link
+for the command: 
+- $ curl -H "X-aws-ec2-metadata-token: $TOKEN" http://169.254.169.254/latest/meta-data/profile/ 
+- $ curl -H "X-aws-ec2-metadata-token: $TOKEN" http://169.254.169.254/latest/meta-data/identity-credentials/ec2/securtiy-credentials/ 
