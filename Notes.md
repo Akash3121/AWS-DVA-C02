@@ -1932,3 +1932,27 @@ got to users and stephane user and create /assign an MFA to the user then we wil
 - the exam expects you to know when you should use an SDK
 - we'll practive AWS SDK when we get to the Lambda functions
 - good to know: if you don't specify or configure a default region, then us-east-1 will be chosen by default
+
+### Exponential Backoff & Service Limit Increase
+
+AWS Limits (Quotas)
+- API Rate LImits:
+    - DescriveInstances API for EC2 has a limit of 100 calls per sec
+    - GetObhect on s3 has a limit of 5500 GET per sec per prefix
+    - for INtermittent Errors: implement Exponential Backoff
+    - for consistent Errors: request an API throttling limit increase
+
+- Service Quotas (Service LImits):
+    - Running On-Demand Standard Instances: 1152 vCPU
+    - you can req a service limit increase by openeing a ticket
+    - you can req a service quota increase by using the Service Quotas API
+
+Exponential Backoff (any AWS Service)
+- if you get ThrottlingException intermittently, use exponential backoff
+- Retry mechanism already included in AWS SDK API calls
+- Must implement youself if ysing the AWS API as-is or in specific cases
+    - must only implement the retries on 5xx server errors and throttling
+    - do not implement on the 4xx client errors
+
+Concept: in every try wait for 1 sec and double the wait time
+ex: 1st try wait 1sec, 2nd try wait for 2secs, 3rd try wait for 4 secs, 4th try wait for 8secs, 5th try wait for 16secs
