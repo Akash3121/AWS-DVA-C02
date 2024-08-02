@@ -1956,3 +1956,44 @@ Exponential Backoff (any AWS Service)
 
 Concept: in every try wait for 1 sec and double the wait time
 ex: 1st try wait 1sec, 2nd try wait for 2secs, 3rd try wait for 4 secs, 4th try wait for 8secs, 5th try wait for 16secs
+
+### AWS Credentials Provider & Chain
+
+AWS CLI Credentials Provider Chain
+
+- the CLI will loook for credentials in theis order
+    1. Command line options - --region, --output, and --profile
+    2. Environment variables - AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, and AWS_SESSION_TOKEN
+    3. CLI credentials file - aws configure
+        - ~/.aws/credentials on LInux/Mac & C:\users\user\.aws\credentials on windows
+    4. CLI configuration file - aws configure
+        - ~/.aws/config on linux/mac & C:\Users\USERNAME\.awconfig on windows
+    5. Container Credentials - for ECS tasks
+    6. Instance Profile Credentials - for EC2 instance profiles
+
+AWS SDK Default Credentials Provider Chain:
+- the Jave SDK example will look for credentials in this order  
+    1. Java system properties - aws.accessKeyId and aws.secretKey
+    2. Environment variables - AWS_ACESS_KEY_ID and AWS_SECRET_ACCESS_KEY
+    3. The default credentila profiles file - ex at: ~/.aws/credentials, shared by many SDK
+    4. Amazon ECS container creentials - for ECS container
+    5. Instance profile credentilas - used on EC2 instances
+
+AWS Credentials Scenario:
+- an application deployed on an EC2 instance is using environment variables with credentilas from an IAM user to call the Amazon S3 API
+- The IAM user has S3FullAccess permissions.
+- the application only uses one S3 bucket, so according to best practices:
+    - an IAM Role & EC2 instance profile wa screated for the EC2 instance
+    - the role was assigned the minimym permissions to access that one S3 bucket
+- The IAM Instance profile was assigned to the EC2 instance, byt it still had access to all S3 buckets. Why?
+    - Ans: the credentials chain is still giving priorities to the environment variables
+
+AWS Credentilas Best Practices
+- overall, never ever store AWS credentials in your code
+- best practice is for credentials to be inherited from the credentials chain
+- if using working within AWS use IAM Roles
+    - EC2 instance roles for Ec2 instnces
+    - ecs roles for ECDS tasks 
+    - Lambda Role for Lambda functions
+
+- if working outside of AWS use environment variables/ named profiles
