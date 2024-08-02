@@ -1920,3 +1920,15 @@ got to users and stephane user and create /assign an MFA to the user then we wil
 - here token code is the one we see on authy/google authenticator ap and the arn:aws thingy is from the copied virtual MFA one, once we enter the link and hit enter we will get the temporaru access key secret key and session token and stuff that we can use
 - create a profile using aws configure --profile mfa
 - then cat ~/.aws/credentials then add the aws_session_token and save, then once we use any thing it will use this temporary codes
+
+### AWS SDK Overview
+
+- What if you want to perform actions on AWS directly from your applications code ? (without using the CLI).
+- You can use an SDK (software development kit) !
+- Official SDKs are...Java, .NET, Node.js, PHP, Python (named boto3 / botocore), Go, Ruby, C++
+
+- we have to use the AWS SDK when coding against AWS services such as DynamoDB
+- fun fact: the AWS CLI uses the Python SDK (boto 3)
+- the exam expects you to know when you should use an SDK
+- we'll practive AWS SDK when we get to the Lambda functions
+- good to know: if you don't specify or configure a default region, then us-east-1 will be chosen by default
