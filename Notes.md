@@ -1899,4 +1899,12 @@ EC2 Instance Metadata Handson:
 Note: add trailing / at the end for the link
 for the command: 
 - $ curl -H "X-aws-ec2-metadata-token: $TOKEN" http://169.254.169.254/latest/meta-data/profile/ 
-- $ curl -H "X-aws-ec2-metadata-token: $TOKEN" http://169.254.169.254/latest/meta-data/identity-credentials/ec2/securtiy-credentials/ 
+- $ curl -H "X-aws-ec2-metadata-token: $TOKEN" http://169.254.169.254/latest/meta-data/identity-credentials/ec2/securtiy-credentials/
+
+### AWS CLI Profiles
+
+How do you manage multiple AWS accounts?
+once we are in the terminal if we use cat credentials command we will get the access and secret keys. 
+- to regular configure we use the aws configure command
+- but to create a profile use aws configure --profile my-other-aws-account command, then it will ask for Keys insert by creating from the AWS management console
+- if we use the cat creadetials now we have the other creds too
