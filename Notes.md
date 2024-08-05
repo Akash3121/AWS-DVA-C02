@@ -2082,3 +2082,8 @@ events are going to s3 bucket and the all the events end up in amazon eventbridg
 - advanced filtering options with JSON rules (metadata, object size, name...)
 - multiple destinations - ex: step functions, Kinesis Streams/ Firehouse...
 - Eventbridge capabilities - archive, replay events, reiable delivery
+
+Event notifications hands on: 137 video
+
+- create abucket> goto properties > scroll donw to event notifications > just below event notifications there will be event bridge click on edit set it on and thats it - this is the harder way instead we can directly go to event notifications and create event notification and send to SQS, before doing this create a new SQS queue, in this SQS queue goto access policy and enhance this to allow the s3 bucket to write to SQS queue
+
