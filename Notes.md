@@ -2113,3 +2113,7 @@ S3 performance - S3 Byte-Range Fetches
 - use case 1: can be used to speed up downloads
 - use case 2: can be used to retrieve only partial data (for ex: the head of a file)
 
+### S3 Select & Glacier Select
+- retrieve less data using SQL by performing server-side filtering
+- can filter by rows & columns (simple SQL statements)
+- less network transfer, less CPU cost client-side
