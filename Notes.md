@@ -2087,3 +2087,29 @@ Event notifications hands on: 137 video
 
 - create abucket> goto properties > scroll donw to event notifications > just below event notifications there will be event bridge click on edit set it on and thats it - this is the harder way instead we can directly go to event notifications and create event notification and send to SQS, before doing this create a new SQS queue, in this SQS queue goto access policy and enhance this to allow the s3 bucket to write to SQS queue
 
+### S3 performance
+
+- s3 automatically scales to high reqeust rates, latency 100-200 ms
+- your application can achieve atleast 3500 PUT/CUPY/POST/DELETE or 5500 GET/HEAD requests per sec per prefix in a bucket.
+- there are no limit to the no of prefixes in a bucket.
+- ex: object path => prefix:
+    - bucket/folder1/sub1/file => /folder1/sub1 (this is the prefix, bw bucket and file)
+    - bucket/folder2/sub2/file => /folder1/sub2
+    - bucket/1/file => /1/
+- if you spread reads across all four prefixes evenly, you can achieve 22,000 requests per second for GET and HEAD
+
+S3 performance:
+- multi-part upload:
+    - remommended for fiels > 100 MB, must use for files > 5 GB
+    - can help parallelize uploads (speed up transfers)
+- S3 Transfer Acceleration
+    - increase transfer speed by transferring file to an AWS edge location which will forward the data to the s3 bucket in the target region
+    - compativle with multi-part upload
+    ex: file in us we want to upload the file to s3 bucket in australia, so first we will upload to the edge location(publc network) nearer to us in US then it will upload it to australia S3 bucket(private network)
+
+S3 performance - S3 Byte-Range Fetches
+- parallelize GETs by requesting specific byte ranges
+- better resilience in case of failures
+- use case 1: can be used to speed up downloads
+- use case 2: can be used to retrieve only partial data (for ex: the head of a file)
+
