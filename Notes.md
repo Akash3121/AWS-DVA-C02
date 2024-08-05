@@ -2060,3 +2060,19 @@ S3 analytics - storage class analysis:
 S3 Lifecycle rules hands on: 135 video
 
 - open the bucket > lifecycle configurations > create lifecycle rule
+
+### S3 Event Notifications
+
+- like S3:ObjectCreated, S3:ObjectRemoved, S3:ObjectRestore, S3:Replication ...
+- obhect name filtering possible (*.jpg)
+- use case: generate thubnails of images uploaded to S3
+- Can create as many "s3 events" as desired
+- S3 event notifications typically deliver events in seconds but sometaimes take a minute or longer
+
+ex: example case based on the event an s3 can send notification to SNS or SQS or Lambda function
+
+S3 event notificatinos - IAM permissisons
+
+from the above example: to access the SNS it need SNS resource (access) policy, and similary to access SQS it need SQS Resource (Access) Policy and to access lambda function it need Lambda Resource Policy
+
+S3 event notifications with Amazon EventBridge:
