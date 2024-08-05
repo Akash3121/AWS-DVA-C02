@@ -2009,3 +2009,24 @@ Signing AWS API requests:
 SigV4 request examples:
 - HTTP Header Option (signature in Authorization header)
 - Query string optino, ex: S3 pre-signed URLs (signature in X-Amz-Signature)
+
+# Section 13: Advanced Amazon S3
+
+### S3 Lifecycle Rules(with S3 analytics)
+
+S3 - moving bw storage classes
+- can transition objects bw storage classes
+- for infrequently accessedd object, move them to Standard IA
+- for archive obhects that you don't need fast access to, move them to Glacier or Glacier Deep Archive
+- moving obhcts can be automated using a Lifecycle Rules
+
+Lifecycle Rules
+- Transition Action - configure objecsts to transition to another storage class
+    - move obhects ot standard IA class 60days after creation
+    - move to Glacier for acchiving agter 6 months
+- expiration actions - confiugre objects to expire(delete) after some time
+    - access log files can be set to delete after a 365 days
+    - can be used to delete old versions of files (if versioning is enabled)
+    - can be used to delete incomplete Multi-Part uploads
+- rules can be created for a certain prefix (example: s3://mybucket/mp3/*)
+- rules can be created for certain obhects Tahs (example: Department: Finance)
