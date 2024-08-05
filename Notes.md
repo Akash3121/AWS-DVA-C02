@@ -2030,3 +2030,29 @@ Lifecycle Rules
     - can be used to delete incomplete Multi-Part uploads
 - rules can be created for a certain prefix (example: s3://mybucket/mp3/*)
 - rules can be created for certain obhects Tahs (example: Department: Finance)
+
+Life cycle rules (scenario 1)
+
+- your application on ec2 creates images thumbnails after profile photos are uploaded to amazon s3. these thumbnails can be easily recreated, and only need to be kept for 60 days. The source images should be able to be immediately retrieved for these 60 days and afterwards, the user can wait upto 6 hrs. How would you design this?
+
+ans:
+- s3 source images can be on Standard, with a lifecycle configuration to transition them to Glacier after 60 days.
+- s3 thumbnails can be on one zone IA with al lifecycle configuration to expire them (delete them) after 60 days.
+
+Lifecycle Rules (Scenario 2)
+
+- A rule in your company states that you should be able to recover your deleted S3 objects immediately for 30 days, although this may happen rarely. After this time, and for up to 365 days, deleted objects should be recoverable within 48 hours.
+
+Ans:
+- Enable S3 Versioning in order to have object versions, so that “deleted objects” are in fact hidden by a “delete marker” and can be recovered
+- Transition the “noncurrent versions” of the object to Standard IA
+- Transition afterwards the “noncurrent versions” to Glacier Deep Archive
+
+S3 analytics - storage class analysis:
+- help  you decide when to transition obhecst to the right storage class
+- recommendations for Standard and Standard IA
+    - does not work for One zone IA or Glacier
+- report is updated daily
+- 24 to 48 hrs to start seeing data analysis
+
+- good first step to put together Lifecycle rules (or improve them)!
