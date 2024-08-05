@@ -2076,3 +2076,9 @@ S3 event notificatinos - IAM permissisons
 from the above example: to access the SNS it need SNS resource (access) policy, and similary to access SQS it need SQS Resource (Access) Policy and to access lambda function it need Lambda Resource Policy
 
 S3 event notifications with Amazon EventBridge:
+
+events are going to s3 bucket and the all the events end up in amazon eventbridge (no matter what all of them), we can set up rules in eventbridge and based on rules we can send to over 18 AWS Services as destinations
+
+- advanced filtering options with JSON rules (metadata, object size, name...)
+- multiple destinations - ex: step functions, Kinesis Streams/ Firehouse...
+- Eventbridge capabilities - archive, replay events, reiable delivery
