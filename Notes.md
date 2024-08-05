@@ -2056,3 +2056,7 @@ S3 analytics - storage class analysis:
 - 24 to 48 hrs to start seeing data analysis
 
 - good first step to put together Lifecycle rules (or improve them)!
+
+S3 Lifecycle rules hands on: 135 video
+
+- open the bucket > lifecycle configurations > create lifecycle rule
